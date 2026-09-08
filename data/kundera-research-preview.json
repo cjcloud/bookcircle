@@ -1,0 +1,38 @@
+{
+  "bookId":"kundera",
+  "runDate":"2026-09-08T16:00:00.000Z",
+  "model":"claude-sonnet-5",
+  "releaseApproved":false,
+  "reception":{
+    "criticalSample":{"positive":4,"mixed":3,"negative":0,"unclear":1,"total":8,"note":"The sample contains four positive reviews, three mixed reviews and one critical essay whose overall verdict was unclear. No numeric critic average has been invented."},
+    "readerPlatforms":[
+      {"name":"Goodreads","rating":4.10,"scale":5,"ratingCount":568009,"reviewCount":36154,"retrievedAt":"2026-09-08","url":"https://www.goodreads.com/book/show/135566539"},
+      {"name":"The StoryGraph","rating":3.96,"scale":5,"ratingCount":7170,"reviewCount":null,"retrievedAt":"2026-09-08","url":"https://app.thestorygraph.com/book_reviews/039aa714-b208-4851-952f-2dc68764cdfb"}
+    ],
+    "note":"Platform averages describe overall reader appreciation. They do not rank either side of a discussion polarity, and the platforms remain separate."
+  },
+  "coverage":{"reviewsIncluded":8,"reviewsConsidered":41,"holdoutReviews":0,"excludedItems":33,"saturation":"Eight complete, attributed reviews passed screening. Staged synthesis produced one source-supported discussion polarity. A broader thematic saturation claim has not been made."},
+  "candidates":[
+    {
+      "id":"ideas-and-felt-life",
+      "status":"model_supported",
+      "question":"Do the novel's philosophical and political ideas deepen its emotional power, or sometimes leave too little room for the characters' felt lives?",
+      "positionA":"Tom Nixon found that the novel's philosophical and political ideas contributed to a beautiful, moving and memorable reading experience.",
+      "positionB":"John Banville found the novel significant and praised its treatment of Karenin, but argued that too much political argument comes at the expense of the felt life he expects from a great novel.",
+      "sources":["kundera-review-6","kundera-review-7"],
+      "balance":{"viewA":3,"mixed":1,"viewB":1,"notAddressed":1,"unresolved":2,"coveragePercent":62.5},
+      "reasons":["Both reviewers assess whether the novel's ideas strengthen or weaken its emotional effect.","Banville's praise for the Karenin episode and the novel's significance is retained alongside his criticism, rather than being omitted to create a cleaner opposition.","A fresh audit supported attribution, preserved qualifications, genuine disagreement, member wording and reasonable evidence of independent authorship."]
+    }
+  ],
+  "sources":[
+    {"id":"kundera-review-1","title":"The Unbearable Lightness of Being by Milan Kundera — A Review","author":"Jason","url":"https://weneedtotalkaboutbooks.com/2021/04/20/the-unbearable-lightness-of-being-by-milan-kundera-a-review/","sample":"independent review · mixed"},
+    {"id":"kundera-review-2","title":"Book review: The Unbearable Lightness of Being","author":"s 🍊","url":"https://sadgirlbookclub.substack.com/p/book-review-the-unbearable-lightness","sample":"independent review · positive"},
+    {"id":"kundera-review-3","title":"The Unbearable Lightness of Being","author":"choirboymotel","url":"https://hoorayfordeadwhitemales.com/2022/03/27/the-unbearable-lightness-of-being/","sample":"independent review · mixed"},
+    {"id":"kundera-review-4","title":"The Game of Lights","author":"Janet Malcolm","url":"https://www.nybooks.com/articles/1984/05/10/the-game-of-lights/","sample":"professional review · positive"},
+    {"id":"kundera-review-5","title":"Milan Kundera: The Unbearable Lightness of Being","author":"Trevor Berrett","url":"https://mookseandgripes.com/reviews/2008/11/15/milan-kunderas-the-unbearable-lightness-of-being/","sample":"independent review · positive"},
+    {"id":"kundera-review-6","title":"The Unbearable Lightness of Being — A Review","author":"Tom Nixon","url":"https://litcityblues.substack.com/p/the-unbearable-lightness-of-being","sample":"independent review · positive"},
+    {"id":"kundera-review-7","title":"Light but sound","author":"John Banville","url":"https://www.theguardian.com/books/2004/may/01/fiction.johnbanville","sample":"professional rereview · mixed"},
+    {"id":"kundera-review-8","title":"Forty years of The Unbearable Lightness of Being","author":"R Sivakumar","url":"https://scroll.in/article/1077468/scroll_in","sample":"critical essay · overall verdict unclear"}
+  ],
+  "excluded":["Retailer and bookseller pages","Reader-platform entries, which are used only for aggregate reception","Study guides, summaries and academic search results","Pages about other books or the film adaptation","Unavailable, incomplete, duplicated or unattributed article extracts"]
+}

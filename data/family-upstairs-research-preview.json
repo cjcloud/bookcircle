@@ -1,0 +1,60 @@
+{
+  "bookId":"family-upstairs",
+  "runDate":"2026-09-08T14:00:00.000Z",
+  "model":"claude-sonnet-5",
+  "releaseApproved":false,
+  "reception":{
+    "criticalSample":{"positive":5,"mixed":4,"negative":1,"unclear":0,"total":10,"note":"Many critics did not provide a numeric score, so the app reports the sample composition rather than inventing a star average."},
+    "readerPlatforms":[
+      {"name":"Goodreads","rating":3.95,"scale":5,"ratingCount":604926,"reviewCount":45542,"retrievedAt":"2026-09-08","url":"https://www.goodreads.com/book/show/42448034-the-family-upstairs"},
+      {"name":"The StoryGraph","rating":3.83,"scale":5,"ratingCount":15100,"reviewCount":null,"retrievedAt":"2026-09-08","url":"https://app.thestorygraph.com/book_reviews/a9b237f8-8661-4c2f-bd40-fd096a4ffd96"}
+    ],
+    "note":"Platform averages describe overall reader appreciation. They do not rank either side of a discussion polarity, and the platforms remain separate."
+  },
+  "coverage":{"reviewsIncluded":10,"reviewsConsidered":35,"holdoutReviews":0,"excludedItems":25,"saturation":"The later reviews repeated the established questions about viewpoints, plausibility, characterization and treatment of trauma. No new assessed discussion theme appeared in the final source."},
+  "candidates":[
+    {
+      "id":"viewpoint-structure",
+      "status":"model_supported",
+      "question":"Did the three viewpoints build a fuller mystery, or leave too little room to develop the main characters?",
+      "positionA":"The Lit Bitch initially found the viewpoints disorienting, but valued the way they came together to create a wider view of the story.",
+      "positionB":"Alexa Logush found that the intersecting plot and partly developed characters made the story confusing, and wanted fewer viewpoints with more attention to the central characters.",
+      "sources":["fu-review-6","fu-review-8"],
+      "balance":{"viewA":5,"mixed":2,"viewB":2,"notAddressed":1,"unresolved":0,"coveragePercent":90},
+      "reasons":["Both reviewers assess what the three-viewpoint structure contributes to or takes away from the novel.","The positive view retains its initial-disorientation qualification; the critical view explains the connection between narrative breadth, confusion and character development.","Claude’s separate check supported attribution, qualifications, genuine disagreement, member wording and source independence."]
+    },
+    {
+      "id":"mystery-construction",
+      "status":"unsupported",
+      "question":"Do the twists form a convincing mystery, or do gaps in the investigation weaken it?",
+      "positionA":"One review praised the number of strange and shocking twists.",
+      "positionB":"Another discussion mentioned implausible investigative gaps.",
+      "sources":["fu-review-1","fu-review-9"],
+      "balance":null,
+      "reasons":["Shock and plausibility are different aspects of a mystery and can coexist.","The investigative criticism was attributed to the reviewer’s book club and followed by a qualification that the reviewer might not have noticed it independently.","The proposed polarity therefore overstated both attribution and disagreement and remains blocked."]
+    },
+    {
+      "id":"trauma-treatment",
+      "status":"unresolved",
+      "question":"Does the novel examine its traumatic events fully enough?",
+      "positionA":"One review described the cult story as violent, traumatic and gripping.",
+      "positionB":"Another argued that the aftermath of abuse, violence and rape was not examined with enough care.",
+      "sources":["fu-review-1","fu-review-9"],
+      "balance":null,
+      "reasons":["A story can be both intensely violent and insufficiently attentive to the aftermath.","The first source does not explicitly say that its treatment of trauma is responsible or sufficiently developed.","The evidence may support a layered discussion point, but it does not yet support two opposing claims."]
+    }
+  ],
+  "sources":[
+    {"id":"fu-review-1","title":"The People’s Friend review","author":"Kirsty Souter","url":"https://www.thepeoplesfriend.co.uk/lifestyle/books/book-review-the-family-upstairs-by-lisa-jewell/","sample":"professional magazine review · positive"},
+    {"id":"fu-review-2","title":"Caffeinated Reviewer","author":"Kimberly","url":"https://caffeinatedbookreviewer.com/2024/02/the-family-upstairs-by-lisa-jewell.html","sample":"independent review · positive"},
+    {"id":"fu-review-3","title":"Luke’s Books","author":"Luke Harkness","url":"https://www.lukeharkness.com/book-reviews/book-review-the-family-upstairs-by-lisa-jewell/","sample":"independent review · positive"},
+    {"id":"fu-review-4","title":"Baddie Book Reviews","author":"Baddie Book Reviews","url":"https://baddiebookreviews.com/2024/05/01/the-family-upstairs-by-lisa-jewell/","sample":"independent review · positive"},
+    {"id":"fu-review-5","title":"Books Etc.","author":"Kaley","url":"https://booksetcetera.substack.com/p/review-family-upstairs","sample":"independent review · mixed"},
+    {"id":"fu-review-6","title":"The Lit Bitch","author":"The Lit Bitch","url":"https://thelitbitch.com/2019/12/04/review-the-family-upstairs-by-lisa-jewell/","sample":"independent review · positive"},
+    {"id":"fu-review-7","title":"A Blog of Books and Musicals","author":"Audra Miller","url":"https://funfandomblog.wordpress.com/2020/01/07/book-club-the-family-upstairs-mini-review/","sample":"independent review · negative"},
+    {"id":"fu-review-8","title":"Alexa Logush review","author":"Alexa Logush","url":"https://softbodythought.wordpress.com/2020/10/28/book-review-the-family-upstairs-by-lisa-jewell/","sample":"independent review · mixed"},
+    {"id":"fu-review-9","title":"OffBeatBooks","author":"Florence","url":"https://offbeatbooks21.wordpress.com/2021/07/03/the-family-upstairs-by-lisa-jewell-thriller-edition-escapism/","sample":"independent review · mixed"},
+    {"id":"fu-review-10","title":"Archetypes & Anecdotes","author":"Alexandria Warner","url":"https://archetypesandanecdotes.com/2021/02/06/the-family-upstairs/","sample":"independent review · mixed"}
+  ],
+  "excluded":["Retailer and bookseller pages","Reader-platform entries, which are used only for aggregate reception","Guides, summaries and review aggregators","Social posts and pages for related books","Unavailable, incomplete or unattributed article extracts"]
+}

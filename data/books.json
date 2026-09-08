@@ -1,0 +1,1455 @@
+[
+  {
+    "id": "broken-country",
+    "book_title": "Broken Country",
+    "author": "Clare Leslie Hall",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did Beth's grief over Bobby make her secrecy with Frank and her affair with Gabriel more understandable, or not?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth returns to Gabriel because she loves the man he has become, rather than because being with him revives the future they imagined at seventeen.",
+        "subtext": "Did Beth return because she loved Gabriel as he was in 1968, or because being with him revived the future they had imagined at seventeen?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "Hall makes the love triangle between Beth, Gabriel and Frank believable.",
+        "subtext": "Did Beth, Gabriel and Frank behave in ways their histories made believable, or did Hall make them behave implausibly to keep the love triangle going?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's descriptive writing makes Beth's grief and longing more vivid.",
+        "subtext": "Did Hall's descriptions make Beth's grief and longing more vivid, or repeat and explain those feelings until the scenes became less moving?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel convincingly shows how grief over Bobby affects Beth, Frank and Jimmy.",
+        "subtext": "Did the novel show convincingly how grief over Bobby affected Beth, Frank and Jimmy, or were some of their later actions insufficiently explained?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "Moving between past and present makes the story more compelling.",
+        "subtext": "Did moving between 1955, 1968 and the trial make each revelation more effective, or did withholding Bobby's paternity and the shooting details feel manipulative?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Can you understand someone's choices and still blame them?",
+        "subtext": "When does understanding a person's reasons change how much you blame them?",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "diagnostics": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    },
+    "summary": "Beth's grief, her return to Gabriel and Frank's loyalty invite different judgements about love and responsibility. The discussion also asks whether Hall's writing and use of secrets make those choices more convincing.",
+    "lenses": [
+      {
+        "lens_type": "Ethical",
+        "title": "Beth, grief and responsibility",
+        "core_idea": "Beth's grief over Bobby may explain why Gabriel and Leo draw her back towards her former life, but it does not settle her responsibility to Frank.",
+        "why_it_matters": "The judgement turns on specific conduct: Beth hides her renewed closeness to Gabriel from Frank and then begins an affair.",
+        "what_it_changes": "Consider how far Bobby's death explains those actions and how far Beth remains responsible for deceiving Frank.",
+        "disagreement": "One view sees the secrecy and affair as more understandable because Beth is grieving Bobby. Another regards the same conduct as a betrayal for which grief does not remove responsibility.",
+        "collision_ids": [
+          "bc-c1",
+          "bc-c5"
+        ]
+      },
+      {
+        "lens_type": "Psychological",
+        "title": "What Gabriel means to Beth",
+        "core_idea": "Gabriel represents both a present relationship and the life Beth imagined before Bobby's death changed her marriage and future.",
+        "why_it_matters": "Beth may be responding to the man Gabriel has become, to the earlier self and future he recalls, or to both in different measure.",
+        "what_it_changes": "Ask whether Beth is choosing a future with Gabriel or trying to recover the person she was before Bobby died.",
+        "disagreement": "One view sees a lasting love returning. Another sees Beth reaching for her earlier life; both motives may be present, but readers can disagree about which matters more.",
+        "collision_ids": [
+          "bc-c2",
+          "bc-c3"
+        ]
+      },
+      {
+        "lens_type": "Literary",
+        "title": "How the novel creates emotion",
+        "core_idea": "Hall creates emotion through descriptive detail and suspense by moving among 1955, 1968 and the murder trial.",
+        "why_it_matters": "The method succeeds if description reveals the characters' feelings and delayed facts gain meaning from their placement. It fails if narration dictates the emotion or withholds essential facts only for surprise.",
+        "what_it_changes": "Assess the descriptions of grief separately from the decisions to delay Bobby's paternity and the circumstances of the shooting.",
+        "disagreement": "One view is that precise descriptions make grief vivid and the three timelines strengthen each revelation. Another is that emotion is overstated and essential information is delayed mainly to manufacture twists.",
+        "collision_ids": [
+          "bc-c4",
+          "bc-c6"
+        ]
+      }
+    ],
+    "collisions": [
+      {
+        "id": "bc-c1",
+        "title": "Beth and responsibility",
+        "dimension": "Character / Moral Judgement",
+        "lens_a": "Beth's grief over Bobby makes her secrecy with Frank and her affair with Gabriel more understandable.",
+        "lens_b": "Beth remains responsible for deceiving Frank and beginning the affair despite her grief.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "bc-c1-finding"
+        ],
+        "question": {
+          "id": "bc-q1",
+          "collision_id": "bc-c1",
+          "proposition": "Beth deserves more sympathy than criticism.",
+          "subtext": "Did Beth's grief over Bobby make her secrecy with Frank and her affair with Gabriel more understandable, or not?",
+          "category": "Character / Moral Judgement",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "bc-c2",
+        "title": "Gabriel or a lost life?",
+        "dimension": "Relationships",
+        "lens_a": "Beth returns because she loves the man Gabriel has become.",
+        "lens_b": "Beth returns because being with Gabriel revives the future they imagined together at seventeen.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "bc-c2-finding"
+        ],
+        "question": {
+          "id": "bc-q2",
+          "collision_id": "bc-c2",
+          "proposition": "Beth returns to Gabriel because she loves the man he has become, rather than because being with him revives the future they imagined at seventeen.",
+          "subtext": "Did Beth return because she loved Gabriel as he was in 1968, or because being with him revived the future they had imagined at seventeen?",
+          "category": "Relationships",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "bc-c3",
+        "title": "Believing the love triangle",
+        "dimension": "Relationships",
+        "lens_a": "Beth, Gabriel and Frank behave in ways that follow convincingly from their histories.",
+        "lens_b": "Hall makes them act implausibly in order to keep the love triangle going.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "bc-c3-finding"
+        ],
+        "question": {
+          "id": "bc-q3",
+          "collision_id": "bc-c3",
+          "proposition": "Hall makes the love triangle between Beth, Gabriel and Frank believable.",
+          "subtext": "Did Beth, Gabriel and Frank behave in ways their histories made believable, or did Hall make them behave implausibly to keep the love triangle going?",
+          "category": "Relationships",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "bc-c4",
+        "title": "Writing that moves you",
+        "dimension": "Writing / Style",
+        "lens_a": "Precise descriptive details make Beth's grief and longing more vivid.",
+        "lens_b": "Repeated explanations of Beth's feelings make some scenes less moving.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "bc-c4-finding"
+        ],
+        "question": {
+          "id": "bc-q4",
+          "collision_id": "bc-c4",
+          "proposition": "Hall's descriptive writing makes Beth's grief and longing more vivid.",
+          "subtext": "Did Hall's descriptions make Beth's grief and longing more vivid, or repeat and explain those feelings until the scenes became less moving?",
+          "category": "Writing / Style",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "bc-c5",
+        "title": "How grief is shown",
+        "dimension": "Handling of Subjects",
+        "lens_a": "The novel convincingly shows grief contributing to Beth's renewed attachment to Gabriel, Frank's self-blame and Jimmy's anger.",
+        "lens_b": "The connections between grief and some of those later actions are insufficiently developed.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "bc-c5-finding"
+        ],
+        "question": {
+          "id": "bc-q5",
+          "collision_id": "bc-c5",
+          "proposition": "The novel convincingly shows how grief over Bobby affects Beth, Frank and Jimmy.",
+          "subtext": "Did the novel show convincingly how grief over Bobby affected Beth, Frank and Jimmy, or were some of their later actions insufficiently explained?",
+          "category": "Handling of Subjects",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "bc-c6",
+        "title": "Secrets and suspense",
+        "dimension": "Structure / Technique",
+        "lens_a": "Moving among 1955, 1968 and the trial gives the revelations about Bobby and the shooting greater meaning.",
+        "lens_b": "Withholding Bobby's paternity and the shooting details delays information mainly to preserve surprise.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "bc-c6-finding"
+        ],
+        "question": {
+          "id": "bc-q6",
+          "collision_id": "bc-c6",
+          "proposition": "Moving between past and present makes the story more compelling.",
+          "subtext": "Did moving between 1955, 1968 and the trial make each revelation more effective, or did withholding Bobby's paternity and the shooting details feel manipulative?",
+          "category": "Structure / Technique",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "broken-country-extra-1",
+        "title": "Frank's loyalty",
+        "dimension": "Relationships",
+        "lens_a": "Frank accepts responsibility for the shooting chiefly to protect Leo.",
+        "lens_b": "Frank's sacrifice extends his guilt over Bobby's death and damages his own future.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "broken-country-extra-1-finding"
+        ],
+        "question": {
+          "id": "broken-country-extra-1",
+          "collision_id": "broken-country-extra-1",
+          "proposition": "Frank's loyalty is admirable.",
+          "subtext": "Did Frank accept responsibility for the shooting mainly to protect Leo, or because guilt over Bobby's death made him willing to sacrifice his own future?",
+          "category": "Relationships",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "broken-country-extra-2",
+        "title": "Emotion that feels real",
+        "dimension": "Emotional Effect",
+        "lens_a": "The consequences for Beth, Frank and Leo make the novel's emotional scenes convincing.",
+        "lens_b": "Repeated explanations of their pain make those scenes less moving.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "broken-country-extra-2-finding"
+        ],
+        "question": {
+          "id": "broken-country-extra-2",
+          "collision_id": "broken-country-extra-2",
+          "proposition": "The novel's most emotional moments feel convincing.",
+          "subtext": "Were the emotional scenes convincing because they showed the consequences for Beth, Frank and Leo, or did repeated descriptions of their pain make those scenes less moving?",
+          "category": "Emotional Effect",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "broken-country-extra-3",
+        "title": "Believable coincidences",
+        "dimension": "Plot / Credibility",
+        "lens_a": "Gabriel's return, Leo's bond with Beth and the shooting follow through a convincing chain of events.",
+        "lens_b": "The path from Gabriel's return to the shooting depends too heavily on coincidence.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "broken-country-extra-3-finding"
+        ],
+        "question": {
+          "id": "broken-country-extra-3",
+          "collision_id": "broken-country-extra-3",
+          "proposition": "The coincidences in the story are believable.",
+          "subtext": "Did Gabriel's return, Leo's bond with Beth and the events leading to the shooting follow convincingly, or depend too heavily on coincidence?",
+          "category": "Plot / Credibility",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "broken-country-extra-4",
+        "title": "Romance and responsibility",
+        "dimension": "Ideas / Values",
+        "lens_a": "The novel gives Beth's obligations to Frank, the farm and their family the same weight as her renewed love for Gabriel.",
+        "lens_b": "Beth and Gabriel's romance overshadows the consequences of their actions for Frank and the family.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "broken-country-extra-4-finding"
+        ],
+        "question": {
+          "id": "broken-country-extra-4",
+          "collision_id": "broken-country-extra-4",
+          "proposition": "Everyday responsibilities matter as much as romance in the novel.",
+          "subtext": "Did the novel give Beth's obligations to Frank, the farm and their family as much weight as her renewed love for Gabriel?",
+          "category": "Ideas / Values",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "bc-c1-finding",
+        "text": "Beth's grief over Bobby makes her secrecy with Frank and her affair with Gabriel more understandable. A different view: She remains responsible for deceiving Frank and beginning the affair despite her grief.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "bc-c2-finding",
+        "text": "Beth returns because she loves the man Gabriel has become. A different view: She returns because being with Gabriel revives the future they imagined together at seventeen.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "bc-c3-finding",
+        "text": "Beth, Gabriel and Frank behave in ways that follow convincingly from their histories. A different view: Hall makes them act implausibly in order to keep the love triangle going.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "bc-c4-finding",
+        "text": "Precise descriptive details make Beth's grief and longing more vivid. A different view: Repeated explanations of Beth's feelings make some scenes less moving.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "bc-c5-finding",
+        "text": "The novel convincingly shows grief over Bobby contributing to Beth's renewed attachment to Gabriel, Frank's self-blame and Jimmy's anger. A different view: Some of those connections are insufficiently developed.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "bc-c6-finding",
+        "text": "Moving among 1955, 1968 and the trial gives the revelations about Bobby and the shooting greater meaning. A different view: Withholding Bobby's paternity and the shooting details delays information mainly to preserve surprise.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "broken-country-extra-1-finding",
+        "text": "Frank accepts responsibility for the shooting chiefly to protect Leo. A different view: Guilt over Bobby's death makes him willing to sacrifice his own future.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "broken-country-extra-2-finding",
+        "text": "The consequences for Beth, Frank and Leo make the emotional scenes convincing. A different view: Repeated explanations of their pain make those scenes less moving.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "broken-country-extra-3-finding",
+        "text": "Gabriel's return, Leo's bond with Beth and the shooting follow through a convincing chain of events. A different view: The path from Gabriel's return to the shooting depends too heavily on coincidence.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "broken-country-extra-4-finding",
+        "text": "The novel gives Beth's obligations to Frank, the farm and their family the same weight as her renewed love for Gabriel. A different view: The romance overshadows the consequences for Frank and the family.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      }
+    ],
+    "sample_scores": [
+      [
+        2,
+        2,
+        1,
+        -1,
+        -2,
+        -2
+      ],
+      [
+        1,
+        1,
+        0,
+        -1,
+        2,
+        -2
+      ],
+      [
+        1,
+        0,
+        -1,
+        1,
+        0,
+        1
+      ],
+      [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        -2
+      ],
+      [
+        0,
+        0,
+        0,
+        1,
+        0,
+        "no_position"
+      ]
+    ]
+  },
+  {
+    "id": "kundera",
+    "book_title": "The Unbearable Lightness of Being",
+    "author": "Milan Kundera",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "Kundera's reflections make the story more interesting.",
+        "subtext": "Did Kundera's ideas add to the story, or did you want him to get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's sexual freedom is more than a way to avoid commitment.",
+        "subtext": "Was Tomas protecting his freedom, or avoiding responsibility?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's comments help us understand the story.",
+        "subtext": "Did the narrator help you understand, or explain too much?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "Tereza and Sabina feel like people with lives of their own.",
+        "subtext": "Did Tereza and Sabina feel like people in their own right, or mainly part of the men's stories?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel makes love and betrayal feel real.",
+        "subtext": "Did you believe in the relationships, or did they feel like examples of the book's ideas?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting makes the personal story stronger.",
+        "subtext": "Did the politics make the personal choices matter more, or feel like a separate story?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would having no ties make life better, or leave something missing?",
+        "subtext": "Which ties limit our freedom but also make life matter to us?",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "diagnostics": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    },
+    "summary": "Tomas's wish for freedom puts pressure on his relationships. The discussion asks what commitment gives us, whether Kundera's explanations help, and how fully the novel lets Tereza and Sabina tell their own stories.",
+    "lenses": [
+      {
+        "lens_type": "Philosophical",
+        "title": "What Tomas calls freedom",
+        "core_idea": "Tomas wants freedom from sexual commitment, but that freedom affects other people.",
+        "why_it_matters": "His choices raise a practical question: what does he owe someone who loves him?",
+        "what_it_changes": "Judge his freedom alongside its cost to his relationships.",
+        "disagreement": "One view sees Tomas defending his independence. Another sees him avoiding the responsibilities and vulnerability of commitment.",
+        "collision_ids": [
+          "ku-c1",
+          "ku-c2"
+        ]
+      },
+      {
+        "lens_type": "Literary",
+        "title": "When the narrator explains",
+        "core_idea": "Kundera often pauses the action to discuss what the characters and events might mean.",
+        "why_it_matters": "Those comments can help us understand the characters, but can also decide too much for us.",
+        "what_it_changes": "Notice when a comment adds something you would have missed and when you want the scene to speak for itself.",
+        "disagreement": "One view welcomes the narrator as a thoughtful guide. Another finds that his explanations interrupt the people and leave too little room for the reader.",
+        "collision_ids": [
+          "ku-c3",
+          "ku-c5"
+        ]
+      },
+      {
+        "lens_type": "Political / ethical",
+        "title": "Whose freedom matters?",
+        "core_idea": "Freedom looks different when a choice is limited by political power or by a partner's wishes.",
+        "why_it_matters": "Tomas's idea of independence is only one account; Tereza and Sabina have needs and choices of their own.",
+        "what_it_changes": "Ask what each person can actually choose, and who bears the cost when another person claims freedom.",
+        "disagreement": "One view finds that the political pressure and the women's stories make freedom a concrete problem. Another thinks the novel gives its ideas more attention than the people living with their consequences.",
+        "collision_ids": [
+          "ku-c4",
+          "ku-c6"
+        ]
+      }
+    ],
+    "collisions": [
+      {
+        "id": "ku-c1",
+        "title": "Ideas and story",
+        "dimension": "Ideas / Values",
+        "lens_a": "The reflections reveal more about the characters' choices.",
+        "lens_b": "The reflections interrupt the story and explain too much.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "ku-c1-finding"
+        ],
+        "question": {
+          "id": "ku-q1",
+          "collision_id": "ku-c1",
+          "proposition": "Kundera's reflections make the story more interesting.",
+          "subtext": "Did Kundera's ideas add to the story, or did you want him to get on with it?",
+          "category": "Ideas / Values",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "ku-c2",
+        "title": "Tomas and freedom",
+        "dimension": "Character / Moral Judgement",
+        "lens_a": "Tomas values the freedom to live on his own terms.",
+        "lens_b": "Tomas calls it freedom when he avoids responsibility to others.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "ku-c2-finding"
+        ],
+        "question": {
+          "id": "ku-q2",
+          "collision_id": "ku-c2",
+          "proposition": "Tomas's sexual freedom is more than a way to avoid commitment.",
+          "subtext": "Was Tomas protecting his freedom, or avoiding responsibility?",
+          "category": "Character / Moral Judgement",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "ku-c3",
+        "title": "The narrator's role",
+        "dimension": "Writing / Style",
+        "lens_a": "The narrator helps us notice connections we might miss.",
+        "lens_b": "The narrator leaves too little for us to decide.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "ku-c3-finding"
+        ],
+        "question": {
+          "id": "ku-q3",
+          "collision_id": "ku-c3",
+          "proposition": "Kundera's comments help us understand the story.",
+          "subtext": "Did the narrator help you understand, or explain too much?",
+          "category": "Writing / Style",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "ku-c4",
+        "title": "Tereza and Sabina",
+        "dimension": "Handling of Subjects",
+        "lens_a": "Both women have desires and conflicts beyond their relationships with men.",
+        "lens_b": "The women are seen mainly through men's needs and desires.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "ku-c4-finding"
+        ],
+        "question": {
+          "id": "ku-q4",
+          "collision_id": "ku-c4",
+          "proposition": "Tereza and Sabina feel like people with lives of their own.",
+          "subtext": "Did Tereza and Sabina feel like people in their own right, or mainly part of the men's stories?",
+          "category": "Handling of Subjects",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "ku-c5",
+        "title": "Believing the relationships",
+        "dimension": "Relationships",
+        "lens_a": "The relationships feel emotionally convincing.",
+        "lens_b": "The characters seem designed to illustrate ideas about love.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "ku-c5-finding"
+        ],
+        "question": {
+          "id": "ku-q5",
+          "collision_id": "ku-c5",
+          "proposition": "The novel makes love and betrayal feel real.",
+          "subtext": "Did you believe in the relationships, or did they feel like examples of the book's ideas?",
+          "category": "Relationships",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "ku-c6",
+        "title": "Politics and private lives",
+        "dimension": "Historical / Political",
+        "lens_a": "Political pressure makes the characters' choices harder and more revealing.",
+        "lens_b": "The politics feels separate from the relationships.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "ku-c6-finding"
+        ],
+        "question": {
+          "id": "ku-q6",
+          "collision_id": "ku-c6",
+          "proposition": "The political setting makes the personal story stronger.",
+          "subtext": "Did the politics make the personal choices matter more, or feel like a separate story?",
+          "category": "Historical / Political",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "kundera-extra-1",
+        "title": "What commitment gives",
+        "dimension": "Ideas / Values",
+        "lens_a": "Caring for others gives their lives meaning.",
+        "lens_b": "Commitment closes off lives they could otherwise lead.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "kundera-extra-1-finding"
+        ],
+        "question": {
+          "id": "kundera-extra-1",
+          "collision_id": "kundera-extra-1",
+          "proposition": "Commitment gives the characters more than it takes away.",
+          "subtext": "Did responsibilities give their lives meaning, or hold them back?",
+          "category": "Ideas / Values",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "kundera-extra-2",
+        "title": "Love and independence",
+        "dimension": "Relationships",
+        "lens_a": "Closeness helps the characters feel free.",
+        "lens_b": "Love becomes a demand to control another person.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "kundera-extra-2-finding"
+        ],
+        "question": {
+          "id": "kundera-extra-2",
+          "collision_id": "kundera-extra-2",
+          "proposition": "Love leaves room for independence in this novel.",
+          "subtext": "Did being close help them feel free, or make them feel owned?",
+          "category": "Relationships",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "kundera-extra-3",
+        "title": "Returning to events",
+        "dimension": "Structure / Technique",
+        "lens_a": "Each return changes how we see what happened.",
+        "lens_b": "Repetition slows the story without adding enough.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "kundera-extra-3-finding"
+        ],
+        "question": {
+          "id": "kundera-extra-3",
+          "collision_id": "kundera-extra-3",
+          "proposition": "Returning to the same events helps us understand them better.",
+          "subtext": "Did going back over events show you something new, or feel repetitive?",
+          "category": "Structure / Technique",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "kundera-extra-4",
+        "title": "Distance from the characters",
+        "dimension": "Emotional Effect",
+        "lens_a": "Stepping back helps us see what their choices cost.",
+        "lens_b": "The distance makes it harder to care about them.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "kundera-extra-4-finding"
+        ],
+        "question": {
+          "id": "kundera-extra-4",
+          "collision_id": "kundera-extra-4",
+          "proposition": "The narrator's distance makes the characters' lives more moving.",
+          "subtext": "Did the writing's distance help you see more, or make it harder to care?",
+          "category": "Emotional Effect",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "ku-c1-finding",
+        "text": "The reflections reveal more about the characters' choices. A different view: The reflections interrupt the story and explain too much.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "ku-c2-finding",
+        "text": "Tomas values the freedom to live on his own terms. A different view: Tomas calls it freedom when he avoids responsibility to others.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "ku-c3-finding",
+        "text": "The narrator helps us notice connections we might miss. A different view: The narrator leaves too little for us to decide.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "ku-c4-finding",
+        "text": "Both women have desires and conflicts beyond their relationships with men. A different view: The women are seen mainly through men's needs and desires.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "ku-c5-finding",
+        "text": "The relationships feel emotionally convincing. A different view: The characters seem designed to illustrate ideas about love.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "ku-c6-finding",
+        "text": "Political pressure makes the characters' choices harder and more revealing. A different view: The politics feels separate from the relationships.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "kundera-extra-1-finding",
+        "text": "Caring for others gives their lives meaning. A different view: Commitment closes off lives they could otherwise lead.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "kundera-extra-2-finding",
+        "text": "Closeness helps the characters feel free. A different view: Love becomes a demand to control another person.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "kundera-extra-3-finding",
+        "text": "Each return changes how we see what happened. A different view: Repetition slows the story without adding enough.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "kundera-extra-4-finding",
+        "text": "Stepping back helps us see what their choices cost. A different view: The distance makes it harder to care about them.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      }
+    ],
+    "sample_scores": [
+      [
+        0,
+        0,
+        0,
+        1,
+        "no_position",
+        0
+      ],
+      [
+        2,
+        1,
+        -1,
+        -2,
+        1,
+        -1
+      ],
+      [
+        2,
+        2,
+        -2,
+        -1,
+        1,
+        -1
+      ],
+      [
+        1,
+        0,
+        -1,
+        -1,
+        1,
+        0
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        2,
+        -2
+      ],
+      [
+        0,
+        0,
+        1,
+        0,
+        "no_position",
+        0
+      ]
+    ]
+  },
+  {
+    "id": "family-upstairs",
+    "book_title": "The Family Upstairs",
+    "author": "Lisa Jewell",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry's behaviour is shaped more by his childhood than by cruelty.",
+        "subtext": "Did Henry's childhood help explain his behaviour, or was there more to it?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "David's gradual control of the family is believable.",
+        "subtext": "Could you believe David gained control so slowly, or should someone have stepped in?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "Changing viewpoints makes the mystery more gripping.",
+        "subtext": "Did the different viewpoints keep you interested, or leave you confused?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast pace suits the story.",
+        "subtext": "Did you enjoy the speed, or want more time with the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations fit the clues we have been given.",
+        "subtext": "Did the ending fit together well, or feel too neatly arranged?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters matter as much as solving the mystery.",
+        "subtext": "Did you keep reading for the people, or mainly to solve the mystery?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "Why might people with similar childhoods make very different choices?",
+        "subtext": "How would you weigh what happened to someone against the choices they later made?",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "diagnostics": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    },
+    "summary": "David's control of the household and Henry's later behaviour raise questions about belief and blame. The discussion also asks whether the shifting viewpoints and revelations leave us caring about the people as much as the mystery.",
+    "lenses": [
+      {
+        "lens_type": "Psychological / ethical",
+        "title": "Henry after the house",
+        "core_idea": "Henry's childhood helps explain his later behaviour, but may not explain all of it.",
+        "why_it_matters": "Understanding what he survived does not settle how to judge the harm he causes.",
+        "what_it_changes": "Look for the point where an explanation based on childhood stops being enough for you.",
+        "disagreement": "One view sees Henry mainly as someone shaped by survival. Another sees choices to hurt others that cannot be explained by his childhood alone.",
+        "collision_ids": [
+          "fu-c1",
+          "fu-c6"
+        ]
+      },
+      {
+        "lens_type": "Sociological",
+        "title": "How David gains control",
+        "core_idea": "David gains power through a series of concessions rather than one sudden takeover.",
+        "why_it_matters": "The story depends on whether we believe the household would accept each step.",
+        "what_it_changes": "Consider the reasons for giving in at each stage, rather than judging only the final situation.",
+        "disagreement": "One view finds the gradual takeover frighteningly believable. Another thinks the novel does not give enough reason for the family to let David go so far.",
+        "collision_ids": [
+          "fu-c2"
+        ]
+      },
+      {
+        "lens_type": "Literary",
+        "title": "Surprise and fair clues",
+        "core_idea": "A mystery can surprise us while still giving us a fair chance to understand it.",
+        "why_it_matters": "Jewell controls what we learn through different viewpoints and the timing of details.",
+        "what_it_changes": "Check whether a revelation makes earlier clues clearer or depends on something we had no way to know.",
+        "disagreement": "One view finds that the answers reward attention to earlier clues. Another feels crucial details were hidden mainly to protect the surprise.",
+        "collision_ids": [
+          "fu-c3",
+          "fu-c4",
+          "fu-c5"
+        ]
+      }
+    ],
+    "collisions": [
+      {
+        "id": "fu-c1",
+        "title": "Henry's responsibility",
+        "dimension": "Character / Moral Judgement",
+        "lens_a": "Life in the house helps explain Henry's later behaviour.",
+        "lens_b": "His childhood does not fully explain his willingness to hurt others.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "fu-c1-finding"
+        ],
+        "question": {
+          "id": "fu-q1",
+          "collision_id": "fu-c1",
+          "proposition": "Henry's behaviour is shaped more by his childhood than by cruelty.",
+          "subtext": "Did Henry's childhood help explain his behaviour, or was there more to it?",
+          "category": "Character / Moral Judgement",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "fu-c2",
+        "title": "David's growing control",
+        "dimension": "Handling of Subjects",
+        "lens_a": "Small concessions help explain how David gains power.",
+        "lens_b": "The family accepts too much without enough explanation.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "fu-c2-finding"
+        ],
+        "question": {
+          "id": "fu-q2",
+          "collision_id": "fu-c2",
+          "proposition": "David's gradual control of the family is believable.",
+          "subtext": "Could you believe David gained control so slowly, or should someone have stepped in?",
+          "category": "Handling of Subjects",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "fu-c3",
+        "title": "Following the viewpoints",
+        "dimension": "Structure / Technique",
+        "lens_a": "Each viewpoint adds a useful piece of the mystery.",
+        "lens_b": "The changes make it hard to track who knows what.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "fu-c3-finding"
+        ],
+        "question": {
+          "id": "fu-q3",
+          "collision_id": "fu-c3",
+          "proposition": "Changing viewpoints makes the mystery more gripping.",
+          "subtext": "Did the different viewpoints keep you interested, or leave you confused?",
+          "category": "Structure / Technique",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "fu-c4",
+        "title": "The speed of the story",
+        "dimension": "Writing / Style",
+        "lens_a": "The pace keeps the danger and uncertainty close.",
+        "lens_b": "The speed leaves too little time to understand the characters.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "fu-c4-finding"
+        ],
+        "question": {
+          "id": "fu-q4",
+          "collision_id": "fu-c4",
+          "proposition": "Jewell's fast pace suits the story.",
+          "subtext": "Did you enjoy the speed, or want more time with the characters?",
+          "category": "Writing / Style",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "fu-c5",
+        "title": "Believing the revelations",
+        "dimension": "Plot / Credibility",
+        "lens_a": "Earlier details make sense when the answers arrive.",
+        "lens_b": "The answers depend on information hidden just for the twist.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "fu-c5-finding"
+        ],
+        "question": {
+          "id": "fu-q5",
+          "collision_id": "fu-c5",
+          "proposition": "The major revelations fit the clues we have been given.",
+          "subtext": "Did the ending fit together well, or feel too neatly arranged?",
+          "category": "Plot / Credibility",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "fu-c6",
+        "title": "People beyond the puzzle",
+        "dimension": "Character / Moral Judgement",
+        "lens_a": "We still care about their lives once the mystery is solved.",
+        "lens_b": "Finding out what happened matters more than the people.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture candidate",
+        "finding_ids": [
+          "fu-c6-finding"
+        ],
+        "question": {
+          "id": "fu-q6",
+          "collision_id": "fu-c6",
+          "proposition": "The characters matter as much as solving the mystery.",
+          "subtext": "Did you keep reading for the people, or mainly to solve the mystery?",
+          "category": "Character / Moral Judgement",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "family-upstairs-extra-1",
+        "title": "What family offers",
+        "dimension": "Relationships",
+        "lens_a": "Family connections give the characters support and belonging.",
+        "lens_b": "Those connections mostly bring obligations and painful memories.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "family-upstairs-extra-1-finding"
+        ],
+        "question": {
+          "id": "family-upstairs-extra-1",
+          "collision_id": "family-upstairs-extra-1",
+          "proposition": "Family ties offer real comfort in the novel.",
+          "subtext": "Did family ties offer belonging, or mostly bring obligations?",
+          "category": "Relationships",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "family-upstairs-extra-2",
+        "title": "Life after the house",
+        "dimension": "Character / Moral Judgement",
+        "lens_a": "Their later decisions show that change is possible.",
+        "lens_b": "The harm done in the house still limits their choices.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "family-upstairs-extra-2-finding"
+        ],
+        "question": {
+          "id": "family-upstairs-extra-2",
+          "collision_id": "family-upstairs-extra-2",
+          "proposition": "The survivors can choose what kind of people they become.",
+          "subtext": "Could they move on, or did the house still shape their choices?",
+          "category": "Character / Moral Judgement",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "family-upstairs-extra-3",
+        "title": "A fair mystery?",
+        "dimension": "Plot / Credibility",
+        "lens_a": "The clues reward careful attention.",
+        "lens_b": "Essential information is withheld to prevent us guessing.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "family-upstairs-extra-3-finding"
+        ],
+        "question": {
+          "id": "family-upstairs-extra-3",
+          "collision_id": "family-upstairs-extra-3",
+          "proposition": "The reader has a fair chance to work out the mystery.",
+          "subtext": "Did you have a fair chance to guess, or were key clues held back?",
+          "category": "Plot / Credibility",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      },
+      {
+        "id": "family-upstairs-extra-4",
+        "title": "What stays with you",
+        "dimension": "Emotional Effect",
+        "lens_a": "Their lives matter after we know the answers.",
+        "lens_b": "The puzzle is the book's most memorable feature.",
+        "evidence_strength": "Simulated — not researched",
+        "discussion_potential": "Fixture alternative",
+        "finding_ids": [
+          "family-upstairs-extra-4-finding"
+        ],
+        "question": {
+          "id": "family-upstairs-extra-4",
+          "collision_id": "family-upstairs-extra-4",
+          "proposition": "The characters stay with you longer than the twists.",
+          "subtext": "Did you leave thinking about the people, or mostly the twists?",
+          "category": "Emotional Effect",
+          "question_type": "five_point",
+          "optional": false,
+          "locked": false
+        },
+        "research": {
+          "status": "simulated"
+        }
+      }
+    ],
+    "findings": [
+      {
+        "id": "fu-c1-finding",
+        "text": "Life in the house helps explain Henry's later behaviour. A different view: His childhood does not fully explain his willingness to hurt others.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "fu-c2-finding",
+        "text": "Small concessions help explain how David gains power. A different view: The family accepts too much without enough explanation.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "fu-c3-finding",
+        "text": "Each viewpoint adds a useful piece of the mystery. A different view: The changes make it hard to track who knows what.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "fu-c4-finding",
+        "text": "The pace keeps the danger and uncertainty close. A different view: The speed leaves too little time to understand the characters.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "fu-c5-finding",
+        "text": "Earlier details make sense when the answers arrive. A different view: The answers depend on information hidden just for the twist.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "fu-c6-finding",
+        "text": "We still care about their lives once the mystery is solved. A different view: Finding out what happened matters more than the people.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "family-upstairs-extra-1-finding",
+        "text": "Family connections give the characters support and belonging. A different view: Those connections mostly bring obligations and painful memories.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "family-upstairs-extra-2-finding",
+        "text": "Their later decisions show that change is possible. A different view: The harm done in the house still limits their choices.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "family-upstairs-extra-3-finding",
+        "text": "The clues reward careful attention. A different view: Essential information is withheld to prevent us guessing.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      },
+      {
+        "id": "family-upstairs-extra-4-finding",
+        "text": "Their lives matter after we know the answers. A different view: The puzzle is the book's most memorable feature.",
+        "source": "Sample discussion material; not a verified review or reader survey."
+      }
+    ],
+    "sample_scores": [
+      [
+        1,
+        1,
+        2,
+        1,
+        -2,
+        1
+      ],
+      [
+        2,
+        1,
+        2,
+        -1,
+        -2,
+        -1
+      ],
+      [
+        2,
+        2,
+        1,
+        1,
+        2,
+        1
+      ],
+      [
+        1,
+        1,
+        2,
+        1,
+        1,
+        0
+      ],
+      [
+        "not_discussed",
+        "not_discussed",
+        "not_discussed",
+        "not_discussed",
+        "not_discussed",
+        "not_discussed"
+      ],
+      [
+        2,
+        1,
+        -1,
+        -2,
+        1,
+        -1
+      ]
+    ]
+  }
+]

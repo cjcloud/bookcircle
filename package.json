@@ -1,0 +1,37 @@
+{
+  "name": "book-club-briefing",
+  "version": "1.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "next dev --webpack --hostname 127.0.0.1",
+    "build": "next build --webpack",
+    "start": "next start --hostname 127.0.0.1",
+    "typecheck": "tsc --noEmit",
+    "test": "tsc -p tsconfig.tests.json && node --test .test-build/tests/*.test.js",
+    "research": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/research.js",
+    "research:book": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/research-book.js",
+    "research:staged": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/research-staged.js",
+    "verify:candidates": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/verify-candidates.js",
+    "measure:opinion": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/measure-opinion.js",
+    "discover:reviews": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/discover-reviews.js",
+    "screen:discovery": "tsc -p tsconfig.research.json && node .test-build/scripts/screen-discovery.js",
+    "retrieve:reviews": "tsc -p tsconfig.research.json && node .test-build/scripts/retrieve-reviews.js",
+    "approve:retrieved": "tsc -p tsconfig.research.json && node --env-file=.env.local .test-build/scripts/approve-retrieved-reviews.js",
+    "merge:sources": "tsc -p tsconfig.research.json && node .test-build/scripts/merge-source-sets.js"
+  },
+  "engines": {
+    "node": ">=20.19.0"
+  },
+  "dependencies": {
+    "next": "16.3.4",
+    "react": "18.3.1",
+    "react-dom": "18.3.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.2",
+    "@types/react": "^18.3.12",
+    "@types/react-dom": "^18.3.1",
+    "typescript": "5.9.3"
+  }
+}

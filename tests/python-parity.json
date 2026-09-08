@@ -1,0 +1,2364 @@
+[
+  {
+    "book_id": "broken-country",
+    "case": "original",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "banned",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Critics and some readers agree.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "bc-q1: Member-facing copy contains banned reviewer-summary phrase: \"some readers\".",
+        "bc-q1: Member-facing copy contains banned reviewer-summary phrase: \"critics\"."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "no_style",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Writing / Style"
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 5,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "no_subject",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Handling of Subjects"
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 5,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "missing_collision",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": null,
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "bc-q1: Scored question has no collision provenance."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "deeper_not_optional",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": false,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "bc-gd: Going Deeper must be Optional."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "deeper_not_last",
+    "questions": [
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      },
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "Did her grief and circumstances make her choices understandable, or did you keep coming back to the opportunities she had to choose differently?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Going Deeper must appear last."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "too_long",
+    "questions": [
+      {
+        "id": "bc-q1",
+        "collision_id": "bc-c1",
+        "proposition": "Beth deserves more sympathy than criticism.",
+        "subtext": "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word ",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q2",
+        "collision_id": "bc-c2",
+        "proposition": "Beth's return to Gabriel feels more like love resurfacing than an escape from grief.",
+        "subtext": "Did Gabriel feel like the return of something genuinely important, or was Beth also reaching for the person and life she had before Bobby died?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "bc-q1: Subtext is probably too long for the light-touch member experience."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 1,
+        "Relationships": 2,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "broken-country",
+    "case": "too_few",
+    "questions": [
+      {
+        "id": "bc-q3",
+        "collision_id": "bc-c3",
+        "proposition": "The love triangle feels emotionally convincing rather than mainly a device to drive the plot.",
+        "subtext": "Were you swept up in the relationships, or did they feel familiar — perhaps even a little hackneyed?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q4",
+        "collision_id": "bc-c4",
+        "proposition": "Hall's lyrical writing strengthens the emotional impact of the novel.",
+        "subtext": "Did the writing deepen what you felt, or did it sometimes seem to push a little too hard for an emotional reaction?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q5",
+        "collision_id": "bc-c5",
+        "proposition": "The novel handles grief and loss convincingly.",
+        "subtext": "Did the grief feel genuinely lived-in, or did it sometimes seem to be doing too much work in explaining the characters' choices?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-q6",
+        "collision_id": "bc-c6",
+        "proposition": "The shifting timelines and withheld information strengthen the story.",
+        "subtext": "Did not knowing everything keep you intrigued, or did you ever feel the story was deliberately holding things back simply to create another reveal?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "bc-gd",
+        "collision_id": null,
+        "proposition": "Does understanding why someone behaved as they did change how responsible we believe they are for what followed?",
+        "subtext": "Understanding someone's actions and excusing them are not necessarily the same thing.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": true,
+      "issues": [],
+      "warnings": [
+        "Expected 5–7 scored questions; found 4."
+      ],
+      "category_mix": {
+        "Relationships": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1
+      },
+      "scored_question_count": 4,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "original",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "banned",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "Critics and some readers agree.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "ku-q1: Member-facing copy contains banned reviewer-summary phrase: \"some readers\".",
+        "ku-q1: Member-facing copy contains banned reviewer-summary phrase: \"critics\"."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "no_style",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Writing / Style"
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 5,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "no_subject",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Handling of Subjects"
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 5,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "missing_collision",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": null,
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "ku-q1: Scored question has no collision provenance."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "deeper_not_optional",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": false,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "ku-gd: Going Deeper must be Optional."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "deeper_not_last",
+    "questions": [
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      },
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "Did Kundera's reflections help you see more in the story, or did you sometimes wish he would stop explaining and let the characters get on with it?",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Going Deeper must appear last."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "too_long",
+    "questions": [
+      {
+        "id": "ku-q1",
+        "collision_id": "ku-c1",
+        "proposition": "The philosophical passages deepen the novel rather than weigh it down.",
+        "subtext": "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word ",
+        "category": "Ideas / Values",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q2",
+        "collision_id": "ku-c2",
+        "proposition": "Tomas's pursuit of sexual freedom feels more like freedom than avoidance.",
+        "subtext": "Did Tomas seem genuinely committed to living freely, or did his idea of freedom also give him a way of avoiding obligation and vulnerability?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "ku-q1: Subtext is probably too long for the light-touch member experience."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Ideas / Values": 1,
+        "Character / Moral Judgement": 1,
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "kundera",
+    "case": "too_few",
+    "questions": [
+      {
+        "id": "ku-q3",
+        "collision_id": "ku-c3",
+        "proposition": "Kundera's narrating voice strengthens the reading experience.",
+        "subtext": "Did his interruptions help you understand the characters and ideas, or did you sometimes wish he would step aside and leave more room for you to decide what they meant?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q4",
+        "collision_id": "ku-c4",
+        "proposition": "The women are given enough complexity to balance the novel's male perspective.",
+        "subtext": "Did Tereza and Sabina feel fully realised in their own right, or did you sometimes feel they were being viewed mainly through the concerns and desires of the men around them?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q5",
+        "collision_id": "ku-c5",
+        "proposition": "The novel handles love, fidelity and betrayal convincingly.",
+        "subtext": "Did the relationships feel emotionally real, or did the characters sometimes seem to exist mainly to carry the book's ideas about love and freedom?",
+        "category": "Relationships",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-q6",
+        "collision_id": "ku-c6",
+        "proposition": "The political setting deepens the private story.",
+        "subtext": "Did the pressure of history make the characters' personal choices more meaningful, or did the political material sometimes feel separate from the relationships you were most interested in?",
+        "category": "Historical / Political",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "ku-gd",
+        "collision_id": null,
+        "proposition": "Would complete freedom actually make a life feel more meaningful — or less?",
+        "subtext": "Perhaps some of the things that restrict our freedom are also the things that give our lives weight and significance.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": true,
+      "issues": [],
+      "warnings": [
+        "Expected 5–7 scored questions; found 4."
+      ],
+      "category_mix": {
+        "Writing / Style": 1,
+        "Handling of Subjects": 1,
+        "Relationships": 1,
+        "Historical / Political": 1
+      },
+      "scored_question_count": 4,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "original",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": true,
+      "issues": [],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "banned",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Critics and some readers agree.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "fu-q1: Member-facing copy contains banned reviewer-summary phrase: \"some readers\".",
+        "fu-q1: Member-facing copy contains banned reviewer-summary phrase: \"critics\"."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "no_style",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Writing / Style"
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 5,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "no_subject",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Handling of Subjects"
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 5,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "missing_collision",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": null,
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "fu-q1: Scored question has no collision provenance."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "deeper_not_optional",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": false,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "fu-gd: Going Deeper must be Optional."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "deeper_not_last",
+    "questions": [
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      },
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "Did what happened inside the house make his later behaviour easier to understand, or did you feel there was something darker in Henry that circumstance alone couldn't explain?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Going Deeper must appear last."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "too_long",
+    "questions": [
+      {
+        "id": "fu-q1",
+        "collision_id": "fu-c1",
+        "proposition": "Henry is shaped more by survival than by inherent cruelty.",
+        "subtext": "word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word word ",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q2",
+        "collision_id": "fu-c2",
+        "proposition": "The family's descent into coercive control feels frighteningly believable.",
+        "subtext": "Could you believe that David might gain control of the household so gradually, or were there moments when you found yourself thinking, “Surely someone would have stopped this”?",
+        "category": "Handling of Subjects",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "fu-q1: Subtext is probably too long for the light-touch member experience."
+      ],
+      "warnings": [],
+      "category_mix": {
+        "Character / Moral Judgement": 2,
+        "Handling of Subjects": 1,
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1
+      },
+      "scored_question_count": 6,
+      "going_deeper_count": 1
+    }
+  },
+  {
+    "book_id": "family-upstairs",
+    "case": "too_few",
+    "questions": [
+      {
+        "id": "fu-q3",
+        "collision_id": "fu-c3",
+        "proposition": "The changing viewpoints and timelines strengthen the suspense.",
+        "subtext": "Did the different perspectives keep you curious about how everything fitted together, or did you sometimes have to work too hard to remember who knew what and when?",
+        "category": "Structure / Technique",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q4",
+        "collision_id": "fu-c4",
+        "proposition": "Jewell's fast, direct style suits the darkness and complexity of the story.",
+        "subtext": "Did the pace make the book compelling, or did you sometimes want the story to slow down and spend more time inside the characters?",
+        "category": "Writing / Style",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q5",
+        "collision_id": "fu-c5",
+        "proposition": "The major revelations feel earned rather than engineered.",
+        "subtext": "Did the pieces come together in a satisfying way, or were there moments when you could see the machinery of the plot working?",
+        "category": "Plot / Credibility",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-q6",
+        "collision_id": "fu-c6",
+        "proposition": "The characters have enough emotional depth for the story to matter beyond the mystery.",
+        "subtext": "Once the puzzle began to resolve, were you still invested in the people themselves, or was finding out what happened the main thing keeping you reading?",
+        "category": "Character / Moral Judgement",
+        "question_type": "five_point",
+        "optional": false,
+        "locked": false
+      },
+      {
+        "id": "fu-gd",
+        "collision_id": null,
+        "proposition": "When people survive the same damaging environment but become very different adults, how much should we explain by what happened to them — and how much by what they later choose to become?",
+        "subtext": "Shared experience does not necessarily produce shared character.",
+        "category": "Going Deeper",
+        "question_type": "going_deeper",
+        "optional": true,
+        "locked": false
+      }
+    ],
+    "expected": {
+      "valid": false,
+      "issues": [
+        "Mandatory domain missing: Handling of Subjects"
+      ],
+      "warnings": [
+        "Expected 5–7 scored questions; found 4."
+      ],
+      "category_mix": {
+        "Structure / Technique": 1,
+        "Writing / Style": 1,
+        "Plot / Credibility": 1,
+        "Character / Moral Judgement": 1
+      },
+      "scored_question_count": 4,
+      "going_deeper_count": 1
+    }
+  }
+]

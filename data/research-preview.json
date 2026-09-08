@@ -1,0 +1,121 @@
+{
+  "bookId": "broken-country",
+  "runDate": "2026-09-08T12:46:12.580Z",
+  "model": "claude-sonnet-5",
+  "releaseApproved": false,
+  "reception": {
+    "criticalSample": {
+      "unclear": 0,
+      "positive": 5,
+      "mixed": 3,
+      "negative": 2,
+      "total": 10,
+      "note": "Many critics did not provide a numeric score, so the app reports the sample composition rather than inventing a star average."
+    },
+    "readerPlatforms": [
+      {
+        "name": "Goodreads",
+        "rating": 4.26,
+        "scale": 5,
+        "ratingCount": 723185,
+        "reviewCount": 75336,
+        "retrievedAt": "2026-09-08",
+        "url": "https://www.goodreads.com/en/book/show/243806968"
+      },
+      {
+        "name": "The StoryGraph",
+        "rating": 4.19,
+        "scale": 5,
+        "ratingCount": 18100,
+        "reviewCount": null,
+        "retrievedAt": "2026-09-08",
+        "url": "https://app.thestorygraph.com/book_reviews/6c885b06-4e00-4ab7-b153-a8990a19c1e8"
+      }
+    ],
+    "note": "Platform averages describe overall reader approval. They do not reveal what readers thought about a particular collision, and different platforms are shown separately rather than blended."
+  },
+  "coverage": {
+    "reviewsIncluded": 10,
+    "reviewsConsidered": 16,
+    "holdoutReviews": 1,
+    "excludedItems": 5,
+    "saturation": "The tenth review reinforced themes already present in the earlier reviews and added no new assessed disagreement. One trade review remains as a holdout check before release."
+  },
+  "candidates": [
+    {
+      "id": "beth-characterisation",
+      "status": "model_supported",
+      "question": "Is Beth a sympathetically complex heroine or an unlikeable, immature one?",
+      "positionA": "Rebecca Munro found Beth so convincingly drawn that even her bad choices retain a sense of tragic beauty.",
+      "positionB": "Doreen found Beth selfish, self-absorbed and emotionally immature, and saw no convincing emotional growth over the course of the story.",
+      "sources": ["bc-munro", "bc-schatje"],
+      "balance": {
+        "viewA": 1,
+        "mixed": 1,
+        "viewB": 1,
+        "notAddressed": 5,
+        "unresolved": 2,
+        "coveragePercent": 30
+      },
+      "reasons": [
+        "Both positions assess the same feature: whether Beth’s flaws deepen her characterization or make her difficult to support.",
+        "The surrounding text preserves each reviewer’s qualification rather than reducing either view to a slogan.",
+        "Claude assessed attribution, qualifications, disagreement, member wording and source independence as supported."
+      ]
+    },
+    {
+      "id": "plot-surprise",
+      "status": "unsupported",
+      "question": "Do the plot developments feel surprising or predictable?",
+      "positionA": "One review found many twists unexpected.",
+      "positionB": "Another found much of the story predictable.",
+      "sources": ["bc-hns", "bc-schatje"],
+      "balance": null,
+      "reasons": [
+        "The positive review later says the story depends on a single miscommunication, which weakened its praise of the plotting.",
+        "The negative review’s predictability criticism applies mainly to foreshadowed character behaviour, not every twist.",
+        "The original collision therefore flattened important qualifications and is blocked."
+      ]
+    },
+    {
+      "id": "prose-style",
+      "status": "model_supported",
+      "question": "Is the prose disciplined and restrained, or does it become too explanatory?",
+      "positionA": "Seattle Book Mama described the writing as disciplined, restrained and intimate.",
+      "positionB": "Bean’s Book Blog found that the writing became overly explanatory in the second half.",
+      "sources": ["bc-seattle", "bc-beans"],
+      "balance": {
+        "viewA": 2,
+        "mixed": 0,
+        "viewB": 1,
+        "notAddressed": 7,
+        "unresolved": 0,
+        "coveragePercent": 30
+      },
+      "reasons": [
+        "The source passages support a genuine disagreement about the same aspect of prose style.",
+        "The corrected wording removes ‘elegant’, which was not present in the cited passage.",
+        "Claude’s separate rerun assessed attribution, qualifications, disagreement, member wording and source independence as supported."
+      ]
+    }
+  ],
+  "sources": [
+    {"id":"bc-hns","title":"Historical Novel Society review","author":"Lizzie Bentham","url":"https://historicalnovelsociety.org/reviews/broken-country/","sample":"specialist review · mixed"},
+    {"id":"bc-munro","title":"Bookreporter review","author":"Rebecca Munro","url":"https://www.bookreporter.com/reviews/broken-country","sample":"professional review site · positive"},
+    {"id":"bc-west","title":"Lyndsay’s Lit Reviews","author":"Lyndsay West","url":"https://www.lyndsayslitreviews.com/reviews/broken-country","sample":"independent review · mixed"},
+    {"id":"bc-ryland","title":"Jen Ryland Reviews","author":"Jen Ryland","url":"https://www.jenryland.com/readers-guide-and-spoilers-for-broken-country/","sample":"independent review · mixed"},
+    {"id":"bc-beans","title":"Bean’s Book Blog","author":"Bean’s Book Blog","url":"https://beansbookblog.com/2026/01/09/book-review-broken-country-by-clare-leslie-hall-2025-2/","sample":"independent review · negative"},
+    {"id":"bc-guada","title":"You Guada Read With Me","author":"You Guada Read With Me","url":"https://youguadareadwithme.wordpress.com/2025/05/26/sorrow-second-chances-a-review-of-broken-country-by-clare-leslie-hall/","sample":"independent review · positive"},
+    {"id":"bc-creek","title":"On the Creek","author":"Tiff","url":"https://www.onthecreekblog.com/2026/01/broken-country-by-clare-leslie-hall.html","sample":"independent review · positive"},
+    {"id":"bc-schatje","title":"Schatje’s Shelves","author":"Doreen","url":"https://schatjesshelves.blogspot.com/2025/11/review-of-broken-country-by-clare.html","sample":"independent review · negative"},
+    {"id":"bc-seattle","title":"Seattle Book Mama","author":"Seattle Book Mama","url":"https://seattlebookmamablog.org/2025/05/22/broken-country-by-clare-leslie-hall/","sample":"independent review · positive"},
+    {"id":"bc-hidden-nook","title":"The Hidden Book Nook","author":"The Hidden Book Nook","url":"https://thehiddenbooknook.substack.com/p/9-friday-im-in-love-broken-country","sample":"independent review · positive · coverage holdout"}
+  ],
+  "excluded": [
+    "A retailer customer review, because it was outside the critical-review sample",
+    "A review aggregator, because it summarised other people’s writing",
+    "An audiobook review, because it assessed a different edition and performance",
+    "A newspaper result available only as a partial extract, because its full argument could not be checked",
+    "Promotional and recommendation pages, because they did not provide a sustained critical argument"
+  ]
+}

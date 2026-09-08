@@ -1,0 +1,22 @@
+[
+  {
+    "id": "bc-kirkus-2025",
+    "url": "https://www.kirkusreviews.com/book-reviews/clare-leslie-hall/broken-country-2/",
+    "title": "Broken Country",
+    "author": "Kirkus Reviews (individual reviewer not named)",
+    "retrievedAt": "2026-09-08",
+    "text": "An elegantly written historical novel with a compelling love triangle and a couple of clever twists.",
+    "textScope": "Short verbatim excerpt only; not the complete review.",
+    "contextSummary": "Assistant summary, not source text: The review is positive about the prose, relationships and scenes involving Bobby. This excerpt is its concluding assessment. It does not establish an opinion on the specific miscommunication criticised in the other review."
+  },
+  {
+    "id": "bc-hns-bentham-2025",
+    "url": "https://historicalnovelsociety.org/reviews/broken-country/",
+    "title": "Broken Country",
+    "author": "Lizzie Bentham",
+    "retrievedAt": "2026-09-08",
+    "text": "the whole novel pivoted on one miscommunication, which irked me a bit, but showed that I cared about the characters.",
+    "textScope": "Short verbatim excerpt from a longer sentence; not the complete review.",
+    "contextSummary": "Assistant summary, not source text: Bentham praises the writing, characters, time structure and surprises. Her reservation arose after reading. It is a qualified criticism within a favourable review, not a rejection of the plot as a whole."
+  }
+]

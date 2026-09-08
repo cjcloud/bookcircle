@@ -1,0 +1,15 @@
+node_modules/
+.next/
+.pnpm-store/
+*.tsbuildinfo
+.env*
+.vercel/
+
+.test-build/
+.test-build*/
+.npm-cache/
+
+.research-cache/
+.research-build*/
+.dev-server.*.log
+book-club-briefing-claude-handoff-*.zip
