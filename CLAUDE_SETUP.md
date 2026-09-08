@@ -111,7 +111,7 @@ Every review is classified as View A, mixed/qualified, View B, not addressed or 
 
 Saved reports in `data/*research-preview.json` are manually prepared concise displays of completed runs. Adding a report does not make its wording editable or verified.
 
-The only current draft admission is the Kundera candidate declared in `lib/research-promotions.ts`. The manifest binds the book, candidate, target card, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. The Admin Briefing shows **Use verified wording in draft** only for a matching manifest entry. Editing either member-facing text changes its status to **Verification expired** and prevents finalisation.
+The current draft admissions are the Kundera candidate and two Broken Country candidates (`beth-characterisation`, `prose-style`) declared in `lib/research-promotions.ts`. Each manifest entry binds the book, candidate, target card, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. The Admin Briefing shows **Use verified wording in draft** only for a matching manifest entry. Editing either member-facing text changes its status to **Verification expired** and prevents finalisation.
 
 This browser-visible manifest demonstrates the interaction but is not a trusted production boundary. A production research service must repeat admission checks on the server. See [RESEARCH_MILESTONE.md](RESEARCH_MILESTONE.md).
 

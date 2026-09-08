@@ -39,7 +39,7 @@ The local operator pipeline implements:
 - per-review source-coverage classification without viewpoint ranking;
 - editorial prompting for explicit referents, named agency, logical causal language and natural English;
 - saved Admin Briefing reports for all three fixture books;
-- one controlled local admission for the exact verified Kundera proposition;
+- controlled local admission for three exact verified propositions: one Kundera candidate and two Broken Country candidates;
 - immediate expiry and finalisation blocking after any change to admitted wording.
 
 All generated research reports retain `releaseApproved: false`. Unsupported and unresolved candidates remain visible only as research outcomes and cannot enter the Opinion Map through the controlled admission route.
@@ -48,9 +48,9 @@ All generated research reports retain `releaseApproved: false`. Unsupported and 
 
 Research commands run locally outside the browser. The Next.js app displays concise saved reports; it does not call Claude live, discover reviews or retrieve pages.
 
-The Kundera admission manifest proves the desired interaction locally. It binds candidate ID, book, target question, collision, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. Because that manifest and its checks are shipped to the browser, it is not a trusted production security boundary.
+The admission manifest (Kundera, plus the two Broken Country candidates) proves the desired interaction locally. Each entry binds candidate ID, book, target question, collision, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. Because that manifest and its checks are shipped to the browser, it is not a trusted production security boundary.
 
-Simulated fixture maps—drafted with ChatGPT/Codex during prototype development rather than extracted from reviews—may be finalised after their editorial checks pass. The exact locally admitted Kundera candidate may also be finalised while its manifest binding remains valid. No other saved research result is automatically admissible.
+Simulated fixture maps—drafted with ChatGPT/Codex during prototype development rather than extracted from reviews—may be finalised after their editorial checks pass. The exact locally admitted candidates (Kundera's ideas-and-felt-life, and Broken Country's beth-characterisation and prose-style) may also be finalised while their manifest bindings remain valid. No other saved research result is automatically admissible.
 
 ## Work still required for production release
 
@@ -87,6 +87,7 @@ Overall reader appreciation and collision-level research serve different purpose
 - Two candidates passed all five model checks: Beth’s characterisation and the prose’s degree of restraint.
 - A plot-twist candidate was blocked because it flattened qualifications.
 - The earlier three-review attempt was unresolved because it compared different dimensions of response and lacked adequate independence evidence. The later expanded run supersedes it for the displayed briefing.
+- On 8 September 2026, both candidates were independently re-collected and re-verified live (10 of the 11 target reviews retrieved fresh from source; the Kirkus review could not be re-scraped due to a page-structure change) and both again passed all five checks. Beth's characterisation (candidate `beth-characterisation`, targeting `bc-q1`) and prose restraint (candidate `prose-style`, targeting `bc-q4`) are now controlled local promotions in `lib/research-promotions.ts`, admissible from the Admin Briefing's **Use verified wording in draft** control.
 
 ### The Family Upstairs
 

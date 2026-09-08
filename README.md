@@ -11,7 +11,7 @@ Documentation reviewed: 8 September 2026.
 - Fixture Opinion Maps and context copy were drafted with ChatGPT/Codex during prototype development and revised through editorial feedback. They were not distilled from verified reviews. Curator responses and sample meeting data are also simulated, and the interface labels this material accordingly.
 - The Admin Briefing contains saved research reports based on complete public review pages for all three books, with separate Goodreads and StoryGraph appreciation figures.
 - Supported, unsupported and unresolved research outcomes remain distinct. Source coverage counts show how often a sampled review addressed a polarity; they do not rank views or imply consensus.
-- One verified Kundera candidate has a controlled local route into its designated draft card. Its exact wording and evidence digest are fixed; editing it expires verification and blocks finalisation until it is restored or replaced.
+- Three verified candidates have a controlled local route into their designated draft cards: one Kundera candidate and two Broken Country candidates (Beth's characterisation, prose restraint), the latter two re-verified live against freshly retrieved review text on 8 September 2026. Each candidate's exact wording and evidence digest are fixed; editing it expires verification and blocks finalisation until it is restored or replaced.
 - Research reports do not otherwise alter fixture Opinion Maps automatically.
 - The interface has not been deployed to Vercel. Research remains an operator-run command-line workflow rather than an in-app or public API service.
 - Production release of live researched wording remains blocked pending trusted server-side admission and a broader acceptance evaluation. See [RESEARCH_MILESTONE.md](RESEARCH_MILESTONE.md).
@@ -103,7 +103,7 @@ The app has no Vercel-specific library or database dependency and remains portab
 - `lib/editorial.ts`, `lib/editorial-policy.ts`, `lib/tone-wording.ts`: selection, validation, wording and editorial policy.
 - `lib/curator.ts`, `lib/meeting.ts`, `lib/workspace.ts`: editing, capture, persistence validation and migrations.
 - `lib/claude-discovery.ts`, `lib/review-retrieval.ts`, `lib/source-evidence.ts`, `lib/claude-research.ts`: operator research and fail-closed verification.
-- `lib/research-promotions.ts`: exact local admission manifest for the verified Kundera pilot.
+- `lib/research-promotions.ts`: exact local admission manifest for the verified Kundera, Beth's-characterisation and prose-restraint candidates.
 - `scripts/`: discovery, retrieval, screening, synthesis, verification and source-coverage commands.
 - `tests/python-parity.json`: expected results recorded from the original Python engine.
 
