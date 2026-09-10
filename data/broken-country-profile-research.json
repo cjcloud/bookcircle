@@ -1,0 +1,468 @@
+{
+  "bookId": "broken-country",
+  "generatedAt": "2026-09-09T19:35:49.013Z",
+  "model": "claude-sonnet-5",
+  "sourceCount": 10,
+  "proposal": {
+    "genre": "Literary romance / domestic mystery-drama with dual/triple timelines, historical fiction (1950s–60s rural England)",
+    "summaryNoSpoilers": "Set in rural Dorset, England, across intertwined timelines in 1955, 1968, and a present-day murder trial, this poignant love story follows Beth, a farmer's wife married to steady, devoted Frank. Years earlier, as a teenager, Beth fell deeply in love with Gabriel, the son of the wealthy family who owns Meadowlands, the grand estate near her family's farm, but their romance ended in heartbreak before she found new happiness with Frank. Beth and Frank's marriage has weathered great sorrow, including the accidental death of their young son, Bobby. When Gabriel returns to the village years later as a celebrated novelist, now divorced and raising his own young son, Leo, old feelings resurface and Beth finds herself torn between the life she has built and the love she never fully let go of. As secrets, jealousy, and long-buried tensions ripple through the community, the novel builds toward a shocking act of violence whose victim and cause remain hidden until the story's climax.",
+    "summarySpoilers": "Beth and Gabriel's teenage romance ends over a miscommunication—she wrongly believes he has cheated on her once he leaves for Oxford. Beth marries Frank after becoming pregnant, but unbeknownst to Frank, their son Bobby is actually Gabriel's biological child; Bobby later dies at nine in a tree-felling accident involving Frank and his brother Jimmy. A decade on, Gabriel returns to Meadowlands with his son Leo; when Jimmy shoots Leo's dog to protect the farm's lambs, Beth's guilt draws her back into Gabriel's orbit, reigniting their old passion into a secret affair. Tensions boil over when a drunken Jimmy attacks Gabriel, and in the struggle Leo shoots and kills Jimmy. To protect the boy, Frank takes the blame, is tried, acquitted of murder but convicted of manslaughter, and sentenced to eight years in prison. Only afterward does Beth confess to Gabriel that Bobby was his son, and that Gabriel's snobbish mother, Tessa, had secretly paid Beth to disappear during her pregnancy. While Frank serves his sentence, Beth discovers she is pregnant with his child, a daughter named Grace; Gabriel and Leo visit Frank in prison, bringing a measure of healing, and five years later Frank is released and finally meets Grace.",
+    "opinions": [
+      {
+        "sourceId": "bc-hns",
+        "author": "Lizzie Bentham",
+        "publication": "Historical Novel Society",
+        "quote": "Romance fans who like a tangled love triangle, with a good dash of passion and a modicum of sex, will enjoy this story.",
+        "url": "https://historicalnovelsociety.org/reviews/broken-country/",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-munro",
+        "author": "Rebecca Munro",
+        "publication": "Bookreporter",
+        "quote": "Hall is wickedly clever in her intentional obfuscation of her murder plot, her writing is elegantly cadenced",
+        "url": "https://www.bookreporter.com/reviews/broken-country",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-west",
+        "author": "Lyndsay West",
+        "publication": "lyndsayslitreviews.com",
+        "quote": "Broken Country is a romantic whodunnit that tugs at your heartstrings with its dramatic tone.",
+        "url": "https://www.lyndsayslitreviews.com/reviews/broken-country",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-ryland",
+        "author": "Jen Ryland",
+        "publication": "jenryland.com",
+        "quote": "I enjoyed it, and found the dramatic ending right out of a movie.",
+        "url": "https://www.jenryland.com/readers-guide-and-spoilers-for-broken-country/",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-beans",
+        "author": "Bean's Book Blog",
+        "publication": "beansbookblog.com",
+        "quote": "Events and motives should speak for themselves, but in this book, the author tells us repeatedly what is obvious about a character’s guilt, shame, love, regret, etc.",
+        "url": "https://beansbookblog.com/2026/01/09/book-review-broken-country-by-clare-leslie-hall-2025-2/",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-guada",
+        "author": "You Guada Read With Me",
+        "publication": "youguadareadwithme.wordpress.com",
+        "quote": "deep meaning communicated simply is the best form of communication there is",
+        "url": "https://youguadareadwithme.wordpress.com/2025/05/26/sorrow-second-chances-a-review-of-broken-country-by-clare-leslie-hall/",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-creek",
+        "author": "Tiff",
+        "publication": "On the Creek",
+        "quote": "Clare Leslie Hall lulls the reader into a sense of comfort before quietly introducing doubt, tension, and moral gray areas.",
+        "url": "https://www.onthecreekblog.com/2026/01/broken-country-by-clare-leslie-hall.html",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-schatje",
+        "author": "Doreen",
+        "publication": "Schatje’s Shelves",
+        "quote": "Frank is just too good to be believable.",
+        "url": "https://schatjesshelves.blogspot.com/2025/11/review-of-broken-country-by-clare.html",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-seattle",
+        "author": "Seattle Book Mama",
+        "publication": "seattlebookmamablog.org",
+        "quote": "the ending is beautifully planned and executed.",
+        "url": "https://seattlebookmamablog.org/2025/05/22/broken-country-by-clare-leslie-hall/",
+        "containsSpoilers": false
+      },
+      {
+        "sourceId": "bc-hidden-nook",
+        "author": "The Hidden Book Nook",
+        "publication": "thehiddenbooknook.substack.com",
+        "quote": "it’s no surprise this novel is a masterclass in storytelling.",
+        "url": "https://thehiddenbooknook.substack.com/p/9-friday-im-in-love-broken-country",
+        "containsSpoilers": false
+      }
+    ],
+    "points": [
+      {
+        "sentiment": "positive",
+        "text": "The characters, especially Beth, are richly and believably drawn despite their flaws.",
+        "evidence": [
+          {
+            "sourceId": "bc-hns",
+            "passage": "This is a very well written story with well-rounded characters."
+          },
+          {
+            "sourceId": "bc-munro",
+            "passage": "she is so elegantly crafted and believably real that even her bad choices carry an air of tragic beauty"
+          },
+          {
+            "sourceId": "bc-hidden-nook",
+            "passage": "each one feels vivid, rich and easy to visualise, not just their physical forms, but also their intentions and mindsets."
+          },
+          {
+            "sourceId": "bc-west",
+            "passage": "I really appreciate when authors manage to create flawed narrators that we still root for."
+          }
+        ]
+      },
+      {
+        "sentiment": "positive",
+        "text": "The novel skillfully withholds the murder victim's and perpetrator's identities to sustain suspense without overwhelming the story.",
+        "evidence": [
+          {
+            "sourceId": "bc-munro",
+            "passage": "the scent of death, of injustice and hardship, settles over the novel like a fog, keeping you on your toes even in moments of peace and beauty"
+          },
+          {
+            "sourceId": "bc-west",
+            "passage": "The suspense of the murder pulses in the background of the story without overwhelming it."
+          },
+          {
+            "sourceId": "bc-hidden-nook",
+            "passage": "The murder mystery element is particularly well executed."
+          },
+          {
+            "sourceId": "bc-creek",
+            "passage": "The twists don’t feel gimmicky or shocking for the sake of shock."
+          },
+          {
+            "sourceId": "bc-schatje",
+            "passage": "the identities of both the victim and the person charged with murder remain unknown until half way through the novel."
+          }
+        ]
+      },
+      {
+        "sentiment": "positive",
+        "text": "The prose is accessible yet emotionally intimate and disciplined.",
+        "evidence": [
+          {
+            "sourceId": "bc-guada",
+            "passage": "The writing is very accessible; mental gymnastics, not needed. Despite that, there was still a profundity that absolutely shined through that left me pleasantly surprised"
+          },
+          {
+            "sourceId": "bc-seattle",
+            "passage": "The writing is disciplined and restrained, yet oh, so intimate."
+          }
+        ]
+      },
+      {
+        "sentiment": "positive",
+        "text": "The story's vivid, dialogue-driven scenes feel ready-made for a film, TV, or stage adaptation.",
+        "evidence": [
+          {
+            "sourceId": "bc-hns",
+            "passage": "I am sure it would make a great film or TV adaptation."
+          },
+          {
+            "sourceId": "bc-hidden-nook",
+            "passage": "I think it’s easy to imagine it as a stage adaptation."
+          }
+        ]
+      },
+      {
+        "sentiment": "positive",
+        "text": "The novel's handling of grief and forgiveness is deeply moving.",
+        "evidence": [
+          {
+            "sourceId": "bc-guada",
+            "passage": "how humans—though imperfect—still have a massive capacity to forgive and redeem other humans"
+          },
+          {
+            "sourceId": "bc-seattle",
+            "passage": "it would be a crime not to review Broken Country, the stirring love story by Clare Leslie Hall that can make even the hardest cynic weepy-eyed."
+          }
+        ]
+      },
+      {
+        "sentiment": "positive",
+        "text": "The book has earned widespread critical and commercial acclaim, including bestseller and award status.",
+        "evidence": [
+          {
+            "sourceId": "bc-munro",
+            "passage": "Sure to top all of 2025’s “Best Of” lists, BROKEN COUNTRY is a triumphant and truly exciting release from an author guaranteed to become your next favorite."
+          },
+          {
+            "sourceId": "bc-hidden-nook",
+            "passage": "A New York Times bestseller, a Reese’s Book Club pick, a Goodreads Choice Award, and featured on countless ‘Top 10 of 2025’ list"
+          },
+          {
+            "sourceId": "bc-creek",
+            "passage": "I understand why it’s landed on so many “Best of 2025” reading lists."
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "The central breakup between the teenage lovers hinges on a single frustrating miscommunication.",
+        "evidence": [
+          {
+            "sourceId": "bc-hns",
+            "passage": "I realised that the whole novel pivoted on one miscommunication, which irked me a bit"
+          },
+          {
+            "sourceId": "bc-west",
+            "passage": "the miscommunication of lovers"
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "Gabriel's mother and other side characters lean on stereotypical, cliché roles.",
+        "evidence": [
+          {
+            "sourceId": "bc-west",
+            "passage": "sometimes it felt a little cliche (the villainous potential mother-in-law, the farmer faithful to a fault, the miscommunication of lovers)."
+          },
+          {
+            "sourceId": "bc-schatje",
+            "passage": "Gabriel’s mother is just so manipulative, a virtual stereotype of the rich woman who views everyone as her inferior"
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "Frank is written as almost too saintly and forgiving to feel believable.",
+        "evidence": [
+          {
+            "sourceId": "bc-schatje",
+            "passage": "He’s kind, reliable, hard-working, understanding, and unfailingly loving and forgiving."
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "Beth comes across as selfish and emotionally immature, making her hard to like or relate to.",
+        "evidence": [
+          {
+            "sourceId": "bc-schatje",
+            "passage": "I found it difficult to like her. She is selfish and self-absorbed and emotionally immature."
+          },
+          {
+            "sourceId": "bc-ryland",
+            "passage": "I struggled to connect with some of her choices."
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "The second half becomes overly expository, telling readers what characters feel instead of showing it.",
+        "evidence": [
+          {
+            "sourceId": "bc-beans",
+            "passage": "the second half which becomes telly and explanatory. Events and motives should speak for themselves, but in this book, the author tells us repeatedly"
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "A late, melodramatic plot complication near the ending feels like an unnecessary, Jodi Picoult-style shock twist.",
+        "evidence": [
+          {
+            "sourceId": "bc-beans",
+            "passage": "this author, Clare Leslie Hall, seems to have copied that trope of “throw in one more crazy complication to shock the reader” just as the story winds down."
+          },
+          {
+            "sourceId": "bc-schatje",
+            "passage": "the ending, set in 1975, is just too melodramatic"
+          }
+        ]
+      },
+      {
+        "sentiment": "negative",
+        "text": "Despite its popularity, the book is entertaining rather than exceptional or profoundly literary.",
+        "evidence": [
+          {
+            "sourceId": "bc-beans",
+            "passage": "Fine for a quick vacation read, but not much literary merit."
+          },
+          {
+            "sourceId": "bc-west",
+            "passage": "I didn’t find the story as profoundly heart-wrenching as it seems many readers did. It didn’t emotionally wreck me, but it did move me"
+          },
+          {
+            "sourceId": "bc-schatje",
+            "passage": "This book has received glowing reviews, but though I found it entertaining, it’s not what I consider exceptional."
+          }
+        ]
+      }
+    ],
+    "sources": [
+      {
+        "id": "bc-hns",
+        "url": "https://historicalnovelsociety.org/reviews/broken-country/",
+        "title": "Broken Country",
+        "author": "Lizzie Bentham",
+        "retrievedAt": "2026-09-08T21:23:40.877Z",
+        "text": "This poignant love story is mainly set in the Dorset countryside, in the 1950s and 1960s. As a teenager, Beth falls in love with Gabriel, the son of the owners of Meadowlands, the big house in the village. Academically and emotionally they have lots in common, but their backgrounds are worlds apart. Their love affair comes to a troubled end during Gabriel’s first year at the University of Oxford. Heartbroken, Beth marries Frank, a local farmer, and falls in love with him and their land. Their marriage is strong through life’s trials, until Gabriel returns to Meadowlands with his young son. Gabriel and Beth get reacquainted, and she is pulled in two directions because she loves two men at once.\n\nThis is a very well written story with well-rounded characters. The narrative flits between the drama unfolding in the present (1968), and the past (1955 through to 1968), and this structure succeeds in telling an interesting story. There are lots of unexpected plot twists and turns along the way that I did not foresee coming. I greatly enjoyed this book while I was reading it. However, as I was pondering on the story afterwards, I realised that the whole novel pivoted on one miscommunication, which irked me a bit, but showed that I cared about the characters.\n\nRomance fans who like a tangled love triangle, with a good dash of passion and a modicum of sex, will enjoy this story. I am sure it would make a great film or TV adaptation.\n\nThis poignant love story is mainly set in the Dorset countryside, in the 1950s and 1960s. As a teenager, Beth falls in love with Gabriel, the son of the owners of Meadowlands, the big house in the village. Academically and emotionally they have lots in common, but their backgrounds are worlds apart. Their love affair comes to a troubled end during Gabriel’s first year at the University of Oxford. Heartbroken, Beth marries Frank, a local farmer, and falls in love with him and their land. Their marriage is strong through life’s trials, until Gabriel returns to Meadowlands with his young son. Gabriel and Beth get reacquainted, and she is pulled in two directions because she loves two men at once.\n\nThis is a very well written story with well-rounded characters. The narrative flits between the drama unfolding in the present (1968), and the past (1955 through to 1968), and this structure succeeds in telling an interesting story. There are lots of unexpected plot twists and turns along the way that I did not foresee coming. I greatly enjoyed this book while I was reading it. However, as I was pondering on the story afterwards, I realised that the whole novel pivoted on one miscommunication, which irked me a bit, but showed that I cared about the characters.\n\nRomance fans who like a tangled love triangle, with a good dash of passion and a modicum of sex, will enjoy this story. I am sure it would make a great film or TV adaptation.",
+        "textScope": "full_review",
+        "digest": "fd42b3bebba598b1fbfe7c9019666f9128fae64b8142aa7475e78e47db18ae30"
+      },
+      {
+        "id": "bc-munro",
+        "url": "https://www.bookreporter.com/reviews/broken-country",
+        "title": "Broken Country",
+        "author": "Rebecca Munro",
+        "retrievedAt": "2026-09-08T21:23:50.653Z",
+        "text": "Readers of all genres know the exact moment when you read a book that somehow combines everything you love from each --- the taut plotting of a mystery, the bated breath of a romance, the crystalline writing of literary fiction --- into something far greater than the sum of its parts. Recent novels that seem to hit the mark for most include WHERE THE CRAWDADS SING and THE PAPER PALACE…and now BROKEN COUNTRY, the US debut of English novelist Clare Leslie Hall.\n\nEver since joining the Johnson family, Beth has become every bit the farmer’s wife. Despite her teenage dreams of going to Oxford and becoming a writer, she finds that she loves the pastoral life and the stability that it --- and her compassionate, kind husband, Frank --- represent. She loves waking up to feed her men; tending to the weeding; assisting with the animals; and the musky, earthen scent that wafts off her husband as they make love every night. She is even able to find similarities between her bookish dreams and life at Blakely Farm, “where every single day is a different kind of education.”\n\nBeth is the first to acknowledge that farm life is full of tragedies --- including the death of her young son, Bobby, in an accident two years earlier --- but her life with Frank and his brother, Jimmy, has taught her that there’s a resounding clarity and peace that comes with tending to the land. For a while now, that has been enough to sustain her. Until 1968, when hotshot celebrity author Gabriel Wolfe returns to his mansion in their humble hometown of Hemston in North Dorset.\n\n\"Sure to top all of 2025’s 'Best Of' lists, BROKEN COUNTRY is a triumphant and truly exciting release from an author guaranteed to become your next favorite. Trust me, this is the one you’ve been waiting for.\"\n\nGabriel, always the subject of the town’s ire as an outsider, was once the only person who seemed to understand Beth, and their love affair as teenagers was earth-shattering, illuminating and groundbreaking. Frank is fully aware of their history, but while Gabriel married an American woman and made a career as a lauded writer, Beth has remained at Blakely right by his side. Still, the connection between Beth and Gabriel exists as a sort of land mine at the center of Beth and Frank’s marriage --- a topic better left undiscussed and undisturbed.\n\nSo, naturally, disturbance comes the way it always does: at the worst time and in the worst possible way. A dog belonging to Gabriel’s son, Leo, escapes and heads right for the Blakely Farm’s lambs, forcing Jimmy to shoot it. Farm life may be brutal, but no one is prepared to take away an innocent boy’s dog…especially when it happens to belong to the man your brother’s wife once loved. Unfortunately for the Johnsons, this tragedy exposes fault lines in their marriage when Beth takes it upon herself to help Leo acquire a new dog and begin training it.\n\nIf there is one thing that Clare Leslie Hall makes clear early on, it’s that the love between Beth and Frank is steadfast, made of stronger stuff than your average romance. So it is not without great consideration that Frank asks Beth, “Should I be worried about you spending time with Wolfe and his son?” He’s not only referring to their past; he senses that Beth is seeking something inappropriate in her connection to Leo, so close to the age that Bobby was when they lost him. When Beth answers no, she really means it. It is, after all, only the beginning. However, in the pages that follow, she is thrust back to “before,” the year 1955, when she and Gabriel fell in love. Her answer, now held privately, changes more than once as she revisits her summer of love with Gabriel and the miscommunication that tore them apart.\n\nThe loss of their son is something that Beth and Frank have been able to move on from, as they fall in love with each other again, but there is one major milestone they have yet to cross. They are so consumed by guilt and grief that they have stopped talking about Bobby and remembering him. So when Beth finds herself talking to Leo and Gabriel about him, she feels, for the first time in a while, truly happy . She loves Frank like she loves air, but she also loves Gabriel and the way that his affection feels like a vortex back to the young girl she used to be, full of dreams and empty of pain. Before long, her emotional affair turns physical, Frank begins spending nights at the pub, and her brother-in-law, already mercurial, takes the potential dissolution of his family poorly. Beth’s once routine life now seems like a soap opera, with the farmer’s wife bedding the town celebrity. But in alternating chapters, we learn of the affair’s shocking outcome: murder.\n\nIt would be a huge disservice to the cleverly constructed plot that Hall has developed to reveal the victim, or even the main suspect. But the scent of death, of injustice and hardship, settles over the novel like a fog, keeping you on your toes even in moments of peace and beauty. Like the pastoral landscape it so vividly brings to life, BROKEN COUNTRY is made up of contrasts: the warm traditions of the countryside and the rigid old guard; the lively animals and the devastation of the food chain; the strength of enduring, well-tended love; and the dizzying experience of first love. Beth embodies this sense of dissonance, but she is so elegantly crafted and believably real that even her bad choices carry an air of tragic beauty, a sense of the fleetingness of nostalgia and the wicked desire to cling to it.\n\nBut it is in the characters of Frank and Bobby where Hall truly shines. If Frank, reliable and steady, is the novel’s breathing lungs, then Bobby --- and his deep, generational connection to the land his family has tended for decades --- is its beating heart. Though we meet him only in memory, it is impossible to ignore his influence on Hall’s plot and characters, and how gorgeously she ties the tragedy, murder and mayhem back together again, the very same way that nature always returns to itself.\n\nI fear that calling BROKEN COUNTRY the embodiment of the pastoral is starting to sound like a broken record, but there’s no better comparison for a novel as brutal and beautiful as this one. Hall is wickedly clever in her intentional obfuscation of her murder plot, her writing is elegantly cadenced, and her cunning is bolstered and backed by her deep, perceptive portrayals of girlhood and womanhood, love of all kinds, and the ways in which guilt shapes and redeems us.\n\nSure to top all of 2025’s “Best Of” lists, BROKEN COUNTRY is a triumphant and truly exciting release from an author guaranteed to become your next favorite. Trust me, this is the one you’ve been waiting for.",
+        "textScope": "full_review",
+        "digest": "e44c182508a83e944c4a9d49d017fb9a86a2c6705f6ba28b08f3d8b5d0f110d8"
+      },
+      {
+        "id": "bc-west",
+        "url": "https://www.lyndsayslitreviews.com/reviews/broken-country",
+        "title": "Broken Country",
+        "author": "Lyndsay West",
+        "retrievedAt": "2026-09-08T21:23:51.855Z",
+        "text": "Broken Country is a romantic whodunnit that tugs at your heartstrings with its dramatic tone. I was immediately invested in the narrator's love triangle; it felt a bit like The Notebook where you’re rooting for both parties for different reasons. Despite the cheating and wrongdoing, there’s irresistible passion and a pitting of reason and emotion.\n\nIt’s also written quite cleverly. We know from the opening line that someone dies, but we don’t know who and we also don’t know who did it. The suspense of the murder pulses in the background of the story without overwhelming it. This lurking unknowing puts your guard up– who should you be wary of? When are you willing to look the other way?\n\nTurns out, I’m willing to look the other way on a lot of things lol. I really appreciate when authors manage to create flawed narrators that we still root for. Beth, the main character, did some pretty unlikeable things, but I admired her commitment to both navigating her loyalties and staying true to her heart. She knew that the road she was going down was doomed, but she also didn’t shy away from the consequences. Her heart also wanted multiple things at once– a nice, nebulous gray area that the novel nailed.\n\nMy only complaint: sometimes it felt a little cliche (the villainous potential mother-in-law, the farmer faithful to a fault, the miscommunication of lovers). Zooming out, I didn’t find the story as profoundly heart-wrenching as it seems many readers did. It didn’t emotionally wreck me, but it did move me and I was sucked into the story. It’s a very quick read (if anything, I wish it had been longer to flesh out the love triangle a bit more). Broken Country gets 4 out of 5 flames.",
+        "textScope": "full_review",
+        "digest": "efc8c79c070b91d1056fa047c1a725142fb427079dc0de6df98930577ced1abe"
+      },
+      {
+        "id": "bc-ryland",
+        "url": "https://www.jenryland.com/readers-guide-and-spoilers-for-broken-country/",
+        "title": "Broken Country",
+        "author": "Jen Ryland",
+        "retrievedAt": "2026-09-08T21:23:52.268Z",
+        "text": "My Readers Guide and Spoilers for Broken Country discusses this buzzy spring 2025 book club title and a March 2025 Reese’s Book Club pick! While it’s not a traditional mystery, Broken Country IS suspenseful and I think could appeal to mystery and historical fiction readers who want something a little different. I’ll give you my quick take and then include spoilers and a book club discussion questions for Broken Country.\n\nI don’t always read “book club books” but Broken Country offered a mystery of sorts. I also found it a very readable book, one that I found hard to put down.\n\nWhile I figured out some of the reveals, there was still a lot about Broken Country that surprised me.\n\nStrangely, I didn’t relate to Beth, the main character, as much as I thought I would. Beth is a country girl who dreams of studying literature at Oxford, but I struggled to connect with some of her choices. This was the 1950s and 1960s, so that might have played a part.\n\nThere was a LOT of drama in the book, but I didn’t mind that at all. I enjoyed it, and found the dramatic ending right out of a movie. (Hmmm … is Reese going to make that happen??)\n\nIf you have a book club (or just want some thought-provoking questions to look at while reading) download my FREE Broken Country discussion questions.\n\nIf you have issues with the download, please leave a comment below and I can email it directly.\n\nAs a teenager, Beth falls in love with Gabriel , the rich boy whose family owns Meadowlands, the lavish estate nearby.\n\nBeth dreams of going to Oxford, something expected of Gabriel, but an uphill battle for a middle class female in the 1950s.\n\nBeth nearly achieves her dreams, but her jealousy and mistrust of Gabriel, who is at Oxford a year before she plans to be, poisons their relationship.\n\nShe then goes back to Frank , a quiet, patient boy from town who admires her from afar. When she falls pregnant, they marry and she becomes a farmer’s wife.\n\nFrank runs Blakely Farm with his brother Jimmy, a charmer who drinks a bit too much.\n\nOne day, Gabriel appears at Meadowlands with his young son Leo in tow. When their dog attacks the Blakely Farm lambs, killing several of them, Jimmy shoots Leo’s dog.\n\nBeth’s heart goes out to the sobbing Leo. She feels even more sympathetic when she learns that Gabriel and his wife are divorced and Leo struggles to fit in at the local school.\n\nBeth agrees to take a part-time job watching Leo after school even though Frank doesn’t approve.\n\nBeth and her husband Frank are still mourning the tragic accidental death of their nine year-old son, Bobby. Frank and Jimmy were cutting down a dead tree. Frank and Jimmy told Bobby to watch from a distance, but Jimmy came running up as the tree fell and the tree crushed him.\n\nBeth and Gabriel begin to reconnect and discuss the miscommunication that led to their breakup. She thought he was cheating on her, but he now denies it. They start a secret affair.\n\nWhen a reporter comes to town to interview Gabriel, she starts asking questions about his obviously relationship with his neighbor Beth.\n\nAs the town learns about the affair, Jimmy is furious at Frank for not putting a stop to it.\n\nOne night, a drunken Jimmy comes after Gabriel. Beth, who has come to warn Gabriel, hides with Leo under a table. After Jimmy calms down, Gabriel, Beth and Leo Jimmy back to Blakley Farm.\n\nAt the farm, Jimmy suddenly goes for Gabriel’s throat. Leo shoots Jimmy.\n\nFrank tells Gabriel to take Leo home and he and Beth try to convince the police that Jimmy’s death was an accident in which Frank and a drunken Jimmy were struggling over the gun.\n\nFrank is acquitted of murder but convicted of manslaughter and sentenced to eight years in prison.\n\nGabriel comes to the farm to ask Beth why Frank would have taken the blame for something Leo did.\n\nBeth finally confesses all: because Bobby was Gabriel’s biological son, and Frank still felt guilty for Bobby’s death.\n\nGabriel is horrified.\n\nBeth also tells Gabriel that his snobby mother Tessa knew about her pregnancy and paid Beth off to leave.\n\nAs Frank serves out his sentence, Beth learns she is pregnant with Frank’s baby.\n\nFrank does not want a pregnant Beth to visit him in prison, but allows Gabriel and Leo to visit and hear stories about Bobby. This is healing for everyone.\n\nAbout five years later, Frank is released from prison and meets his daughter Grace.",
+        "textScope": "full_review",
+        "digest": "1a26e4f9ecc2ce2ff02bb9c1a3d17b1a9621bb4371484a4da805173ccd12c6dc"
+      },
+      {
+        "id": "bc-beans",
+        "url": "https://beansbookblog.com/2026/01/09/book-review-broken-country-by-clare-leslie-hall-2025-2/",
+        "title": "Broken Country",
+        "author": "Bean's Book Blog",
+        "retrievedAt": "2026-09-08T21:23:52.505Z",
+        "text": "I enjoyed this page turning mystery/thriller/romance for the first hundred pages or so. It’s an easy vacay read and it pulled me in with its “the farmer is dead” opening line. But after awhile, I got tired of the writing, especially in the second half which becomes telly and explanatory. Events and motives should speak for themselves, but in this book, the author tells us repeatedly what is obvious about a character’s guilt, shame, love, regret, etc. \n\nAnd then we get a Jodi Piccoult-like plot twist near the end. Problematic for me not necessarily due to believability but due to what I call the Piccoult pattern. It happens in all of her books, and this author, Clare Leslie Hall, seems to have copied that trope of “throw in one more crazy complication to shock the reader” just as the story winds down. \n\nThis is a small town girl falls in love with rich, sophisticated boy story that gets complicated with small town farmer boy also loving her. So we have a love triangle, a mystery about who killed whom, and a social tier mismatch. Some of this is interesting and real and has potential for a well told story, but it too often feels cheesy and melodramatic. Fine for a quick vacation read, but not much literary merit. Especially after Ian McEwen’s What we Can Know, which offers subtlety and depth and beautiful sentences to develop characters (including a love triangle) in a more compelling and convincing way and without the melodrama.\n\nI’m concurrently reading a long and dense history of NZ book, so in that sense, this book made for a good break from annotating and studying.",
+        "textScope": "full_review",
+        "digest": "f5173305a186f2cdd62a322a84172f7dfdf6cebf4960ec1c53c751d6b84fb453"
+      },
+      {
+        "id": "bc-guada",
+        "url": "https://youguadareadwithme.wordpress.com/2025/05/26/sorrow-second-chances-a-review-of-broken-country-by-clare-leslie-hall/",
+        "title": "Broken Country",
+        "author": "You Guada Read With Me",
+        "retrievedAt": "2026-09-08T21:23:52.663Z",
+        "text": "I picked up Broken Country by Clare Leslie Hall because I needed a palate cleanser. Since my Dad passed away earlier this year, I had been providentially led to books that helped me process my grief, and I found it fitting to take a break from all of the grief related literature I had been consuming. If I need to return back to them, I will. But for now, I wanted, what I thought would be, a light, fast-paced, easy read where I didn’t have to think or feel too hard.\n\nWell, I was wrong. Yes, Broken Country was certainly fast-paced and easy to read. The writing is very accessible; mental gymnastics, not needed. Despite that, there was still a profundity that absolutely shined through that left me pleasantly surprised (note: the author is from England and used several British idioms I had to look up). In my opinion, deep meaning communicated simply is the best form of communication there is (it’s why I love the Narnia books so much).\n\nAnd so, as I started reading, it was apparent that Broken Country is not “light” in nature at all. In fact, themes throughout were quite heavy: the accidental death of a child, the murder of one of the main characters, a legal trial, and the intense, overwhelming, all-consuming, often brain-altering emotions that come with a first love and its end—and the possibility of having it again.\n\nThe book explores what happens when you don’t process grief; how silence and avoidance of that grief can erode your identity; what can happen when you choose to suppress memories; and the horrible consequences that can happen to your soul when you attempt self-atonement.\n\nIn total, this book shows how one choice can alter your entire future, and how every choice you make (even the ones you think are made in secret or in isolation) affect other people.\n\nGrief and the human condition are riddled in these pages. The deep sorrow from a tragedy in the book challenged relationships and personal identity. Is there a purpose for the pain we experience in this life? Why is suffering such a large part of the human experience?\n\nThere is a mystery in the midst of this novel that unfolds slowly but comes to a climax by the end of the book. The questions of moral ambiguity and justice are held up for the reader to critique and challenge. This book forces you to place truth and moral responsibility under a microscope and then dissect it. In this broken world, justice will never be perfect because imperfect people have to execute them.\n\nThe most moving theme in all of the book (in my humble opinion) is the portrayal of how humans—though imperfect—still have a massive capacity to forgive and redeem other humans, especially when the redeeming is completed by the one who was wronged the most.\n\nThis was a sad book . But it ought to be. If the author wanted to portray a realistic depiction of what happens to people and families that are broken, then the author rightfully depicted these characters grappling with having to reconstruct the rubble of their own making.\n\nBut –\n\nIt is in the middle of that brokenness that Grace, forgiveness, and second chances can shine most gloriously.\n\nI hope you read this book with those thoughts in mind.",
+        "textScope": "full_review",
+        "digest": "4e49ebf14936cdd7e1019d8e777de7418f38208e3130b62cc007ba01bdf77368"
+      },
+      {
+        "id": "bc-creek",
+        "url": "https://www.onthecreekblog.com/2026/01/broken-country-by-clare-leslie-hall.html",
+        "title": "Broken Country",
+        "author": "Tiff — On the Creek",
+        "retrievedAt": "2026-09-08T21:23:53.175Z",
+        "text": "A slow burn that turns into a full-blown emotional reckoning\n\nIf you’ve had Broken Country sitting on your TBR or library holds list for what feels like forever, you’re not alone. I did too. And after finally listening to the audiobook this week, I understand why it’s landed on so many “Best of 2025” reading lists.\n\nThis is one of those books that doesn’t rush you … and then suddenly refuses to let you go.\n\nAt first, Broken Country feels almost deceptively simple.\n\nWe’re introduced to Beth and Frank , a married couple living a quiet rural life, alongside Jimmy , Frank’s brother. The opening chapters are grounded, domestic, and familiar, almost too familiar. You settle into the rhythm of their world, thinking you know exactly what kind of story you’re in.\n\nYou don’t.\n\nWhat unfolds is a layered, emotionally charged novel where nothing is quite as it seems . Relationships shift. Perspectives fracture. And just when you think you’ve found solid ground, the story pulls it out from under you.\n\nBy the end, it’s clear this was never a straightforward narrative; it’s a carefully constructed unraveling.\n\nWhat Broken Country does best is misdirection .\n\nClare Leslie Hall lulls the reader into a sense of comfort before quietly introducing doubt, tension, and moral gray areas. The twists don’t feel gimmicky or shocking for the sake of shock. Instead, they feel earned, like realizations that snap into place once you finally have all the pieces.\n\nThis is a novel about:\n\nI t’s introspective without being slow, dramatic without being overdone.\n\nAbsolutely.\n\nListening to Broken Country on audiobook made the experience even more immersive. The emotional shifts land harder when you hear them unfold, and the pacing works beautifully in audio form, especially once the plot accelerates.\n\nIf you’re someone who likes listening while doing chores, driving, or winding down at night, this is a great choice.\n\nWithout giving anything away, this book stays with you because it explores:\n\nBy the final chapters, you’re no longer reading for answers, you’re reading to understand how everything became so complicated.\n\nYes, but not in the way you might expect.\n\nIf you’re looking for a fast-paced thriller right out of the gate, this might test your patience at first. But if you enjoy slow builds, emotional depth, and layered storytelling , Broken Country delivers in a big way.\n\nIt’s the kind of book that starts quietly, twists unexpectedly, and ends with you sitting there thinking, Wow. I did not see it that way at all.",
+        "textScope": "full_review",
+        "digest": "7d3154a047cfad37c6b015246b9f95422a0ec0fca74d956b92d7b50c3c7aeb5c"
+      },
+      {
+        "id": "bc-schatje",
+        "url": "https://schatjesshelves.blogspot.com/2025/11/review-of-broken-country-by-clare.html",
+        "title": "Broken Country",
+        "author": "Doreen — Schatje’s Shelves",
+        "retrievedAt": "2026-09-08T21:23:53.594Z",
+        "text": "Beth and Frank Johnson are happily married and living on the family farm in Dorset. Though life for Beth has not turned out as she dreamed, she is content. Then the arrival of Gabriel Wolfe, Beth’s first love, changes everything. Beth and Gabriel reconnect over his son Leo who reminds Beth of her own son Bobby who died in a tragic accident. Thus begins a love triangle which sets in motion a chain of events that will change the lives of several people.\n\nThere are three timelines. In 1955, we learn about Beth and Gabriel’s short-lived love affair. In 1968, we witness Gabriel’s return and his entry into the lives of his neighbours, the Johnsons. The last timeline is 1969 when there’s a murder trial which Beth attends daily, though the identities of both the victim and the person charged with murder remain unknown until half way through the novel.\n\nI know that we are to have sympathy for Beth because of the death of Bobby, but I found it difficult to like her. She is selfish and self-absorbed and emotionally immature. Over a decade has passed since the end of her romantic relationship with Gabriel, but there’s no evidence of any emotional growth. As soon as Gabriel appears, she is drawn to him and believes they have to be together, but then she also claims “it’s Frank I have to be with.” She admits, “It’s selfish of me to carry on like this,” but we don’t really see her trying not to hurt her husband. She knows the situation is untenable, but “I refuse to think about how it is going to end.” In order for characters to be realistic, they need to be flawed, but she just seems delusional. It takes another death for her to make a choice?!\n\nOn the other hand, Frank is just too good to be believable. He’s kind, reliable, hard-working, understanding, and unfailingly loving and forgiving. His misplaced atonement is unnecessary; if the truth had been revealed, the consequences would have been minimal. Addressing the trauma directly would also be beneficial. Instead, additional guilt is placed on a person who must contend with it for the rest of his life.\n\nOther characters are also problematic. Gabriel’s mother is just so manipulative, a virtual stereotype of the rich woman who views everyone as her inferior who can only do as she dictates. It’s inevitable that she will play a role in shaping events. The same is true for Jimmy, Frank’s brother. His behaviour is definitely foreshadowing. In some ways, therefore, much of what happens is predictable. And the ending, set in 1975, is just too melodramatic, though after the heartbreak and death looming over the entire narrative, it provides some relief.\n\nThis book has received glowing reviews, but though I found it entertaining, it’s not what I consider exceptional.",
+        "textScope": "full_review",
+        "digest": "7896cfa231891e7e8eb01754c837186215bd697fbb1ebfee124b59ce5c817ec5"
+      },
+      {
+        "id": "bc-seattle",
+        "url": "https://seattlebookmamablog.org/2025/05/22/broken-country-by-clare-leslie-hall/",
+        "title": "Broken Country",
+        "author": "Seattle Book Mama",
+        "retrievedAt": "2026-09-08T21:23:53.730Z",
+        "text": "I am late to the party, but it would be a crime not to review Broken Country, the stirring love story by Clare Leslie Hall that can make even the hardest cynic weepy-eyed. My thanks go to NetGalley and Simon and Schuster for the review copy. This book is for sale now.\n\nThe story is set in a small village in Britain during the mid-1900s. The setting bounces back and forth between the present day and the past; it’s easy to keep track of, partly because the author takes care to delineate which chapter is which, and partly because there are few characters to keep track of. Our protagonist is Beth, and she and her husband, Frank, are farmers, have lived in the same community for their whole lives. A farm accident claimed the life of their only child, Bobby, a few years before, but they are both still fragile, ragged in their grief.\n\nThen, oh my my, who comes back to town but Beth’s old flame, Gabriel, a man that came from money and went on to make a name for himself as a novelist. Gabriel has inherited the family house and land, and in the wake of his divorce, has brought his son Leo to live here. Here. Right next door to Beth and Frank.  And to complicate old feelings all the more, his son Leo is about the same age as Bobby was when he died.\n\nIs it possible to be in love with two men at the same time? Beth would tell you that it is. Frank can see what is unfolding, and he tries to reason with Beth, but she assures him that everyone is grown up now, the past is the past, and there’s no reason that they and their new old neighbor cannot be friends.\n\nWell.\n\nI seldom reach for novels like this one, wary as I am of schmalz and schlock, but reader, I see none of either one in this story. The writing is disciplined and restrained, yet oh, so intimate. When a formula or trope comes into view, Hall goes the other way instead. And though I may have thought I knew where we would all end up, I was mistaken; the ending is beautifully planned and executed.\n\nBecause I had fallen a bit behind, I checked out the audio version from Seattle Bibliocommons; reader Hattie Morahan does a stellar job with the narration.\n\nHighly recommended.",
+        "textScope": "full_review",
+        "digest": "4fe85d89380b852df8c28d111bac46bbd47ce0726802015883a56e66f297f773"
+      },
+      {
+        "id": "bc-hidden-nook",
+        "url": "https://thehiddenbooknook.substack.com/p/9-friday-im-in-love-broken-country",
+        "title": "Broken Country",
+        "author": "The Hidden Book Nook",
+        "retrievedAt": "2026-09-08T21:23:54.248Z",
+        "text": "A New York Times bestseller, a Reese’s Book Club pick, a Goodreads Choice Award, and featured on countless ‘Top 10 of 2025’ list, it’s no surprise this novel is a masterclass in storytelling.\n\nSet across 1955, 1968, and the present day, the story centres on Beth, who lives on a farm with her husband, Frank, and his brother, Jimmy. Through its multiple timelines, we learn that in 1955 a young Beth meets Gabriel Wolfe, the son of a wealthy family in the same rural village, and the two embark on a whirlwind romance.\n\nWhen Gabriel returns in 1968 with his young son, Leo, following a divorce from his American wife, their reunion is marked by tragedy. Jimmy shoots Gabriel’s dog after it strays onto their land, attempting to protect his flock. Consumed by guilt, Beth gives Gabriel and Leo a new puppy, a gesture that reignites old feelings and sets the stories events in motion.\n\nThreaded throughout is something far more sinister, a present-day murder trial, with Beth as a witness. What unfolds is a story of a love triangle, buried secrets, and a tragedy that shakes this quiet farming community to its core.\n\nOn paper, this isn’t necessarily my usual genre. I often struggle with historical fiction, and dual timelines only work for me when they’re executed flawlessly. The themes also aren’t typically what I gravitate toward. But none of that mattered here.\n\nI found the story utterly gripping, so much so that I was reading it in the stands during the breaks of an ice hockey match. It blends family drama, romance, and mystery in a way that feels fresh and compelling, exploring emotional territory that feels new and interesting.\n\nThe murder mystery element is particularly well executed. The author reveals information gradually, enough to keep you intrigued but it was never enough to give the game away. I constantly flip-flopped between theories and thoughts as the plot unfolded. That said, I’m not a seasoned mystery/thriller reader and I’m notoriously bad at predicting film twists, so more experienced mystery fans might find it easier to anticipate.\n\nFrom a character perspective, each one feels vivid, rich and easy to visualise, not just their physical forms, but also their intentions and mindsets. Beth, though morally complex, is written with immense depth and heart. Without reducing her to a motherly stereotype, her maternal instincts and emotional vulnerability are portrayed with alot of authenticity and I think many female readers will likely find themselves understanding her emotions and choices, even if they don’t agree with them.\n\nThe contrast between Frank, Jimmy, and Gabriel is equally strong. Each man feels distinct in temperament, motivations, and their role within story. This clarity is especially effective in scenes where their lives intersect, heightening tension and making it really easy as a reader to picture what is going on.\n\nGoing back to the sentiment about how easy I found it to visualize these characters and this world, I think it’s easy to imagine it as a stage adaptation. These characters would be so easy to cast with their extensive dialogue and interesting dynamics making for brilliant character study, and the scenes themselves would be so easy to stage and interpret. Definitely something I would pay money to see!\n\nUltimately, what Claire Leslie Hall accomplishes is a deeply captivating, deeply emotional but none-the-less enthralling story. The conclusion is satisfying, the narrative memorable and I’m super excited to learn more about her work.\n\nThanks for reading! Subscribe for free to receive new posts and support my work.\n\nGreat review! Love your thought about it being a stage play…I can totally see that! This one was on my Top 10 of 2025.\n\nFantastic review! I loved this book so much when I read it last year.\n\nNo posts\n\nA New York Times bestseller, a Reese\\u2019s Book Club pick, a Goodreads Choice Award, and featured on countless \\u2018Top 10 of 2025\\u2019 list, it\\u2019s no surprise this novel is a masterclass in storytelling.\n\nSet across 1955, 1968, and the present day, the story centres on Beth, who lives on a farm with her husband, Frank, and his brother, Jimmy. Through its multiple timelines, we learn that in 1955 a young Beth meets Gabriel Wolfe, the son of a wealthy family in the same rural village, and the two embark on a whirlwind romance.\n\nWhen Gabriel returns in 1968 with his young son, Leo, following a divorce from his American wife, their reunion is marked by tragedy. Jimmy shoots Gabriel\\u2019s dog after it strays onto their land, attempting to protect his flock. Consumed by guilt, Beth gives Gabriel and Leo a new puppy, a gesture that reignites old feelings and sets the stories events in motion.\n\nThreaded throughout is something far more sinister, a present-day murder trial, with Beth as a witness. What unfolds is a story of a love triangle, buried secrets, and a tragedy that shakes this quiet farming community to its core.\n\nOn paper, this isn\\u2019t necessarily my usual genre. I often struggle with historical fiction, and dual timelines only work for me when they\\u2019re executed flawlessly. The themes also aren\\u2019t typically what I gravitate toward. But none of that mattered here.\n\nI found the story utterly gripping, so much so that I was reading it in the stands during the breaks of an ice hockey match. It blends family drama, romance, and mystery in a way that feels fresh and compelling, exploring emotional territory that feels new and interesting.\n\nThe murder mystery element is particularly well executed. The author reveals information gradually, enough to keep you intrigued but it was never enough to give the game away. I constantly flip-flopped between theories and thoughts as the plot unfolded. That said, I\\u2019m not a seasoned mystery/thriller reader and I\\u2019m notoriously bad at predicting film twists, so more experienced mystery fans might find it easier to anticipate.\n\nFrom a character perspective, each one feels vivid, rich and easy to visualise, not just their physical forms, but also their intentions and mindsets. Beth, though morally complex, is written with immense depth and heart. Without reducing her to a motherly stereotype, her maternal instincts and emotional vulnerability are portrayed with alot of authenticity and I think many female readers will likely find themselves understanding her emotions and choices, even if they don\\u2019t agree with them.\n\nThe contrast between Frank, Jimmy, and Gabriel is equally strong. Each man feels distinct in temperament, motivations, and their role within story. This clarity is especially effective in scenes where their lives intersect, heightening tension and making it really easy as a reader to picture what is going on.\n\nGoing back to the sentiment about how easy I found it to visualize these characters and this world, I think it\\u2019s easy to imagine it as a stage adaptation. These characters would be so easy to cast with their extensive dialogue and interesting dynamics making for brilliant character study, and the scenes themselves would be so easy to stage and interpret. Definitely something I would pay money to see!\n\nUltimately, what Claire Leslie Hall accomplishes is a deeply captivating, deeply emotional but none-the-less enthralling story. The conclusion is satisfying, the narrative memorable and I\\u2019m super excited to learn more about her work.",
+        "textScope": "full_review",
+        "digest": "f79284e8efce344cc8c3f7836f36c6b5ef7875e75785ffb2e5d697f14be6fa91"
+      }
+    ]
+  },
+  "verification": {
+    "status": "model_supported",
+    "inputDigest": "2ca0d2bb6e52ee23bec6787fc17aa64cda5ddcf5223bfa359bce1ced843b045f",
+    "checks": [
+      {
+        "name": "genre",
+        "status": "supported",
+        "reason": "Reviews consistently describe a love-triangle romance interwoven with a slow-reveal murder trial across three time periods (1955, 1968, 1969) set in rural Dorset (bc-hns, bc-schatje, bc-hidden-nook), matching the 'literary romance/domestic mystery-drama, historical fiction' tag.",
+        "sourceIds": [
+          "bc-hns",
+          "bc-schatje",
+          "bc-hidden-nook"
+        ]
+      },
+      {
+        "name": "summaryFidelity",
+        "status": "supported",
+        "reason": "Both summaries track closely to the plot as laid out in bc-ryland's detailed spoiler recap (Oxford miscommunication, pregnancy marriage, Bobby's tree-accident death at nine, Jimmy's dog shooting, the affair, Jimmy's death at Leo's hand, Frank's manslaughter conviction, Tessa's payoff, Grace's birth) with no invented events; the minor phrase 'near her family's farm' is a slight imprecision but not a fabricated plot point.",
+        "sourceIds": [
+          "bc-ryland",
+          "bc-munro",
+          "bc-hns"
+        ]
+      },
+      {
+        "name": "spoilerBoundary",
+        "status": "supported",
+        "reason": "summaryNoSpoilers withholds the identity of the murder victim, the shooter, and the paternity secret ('victim and cause remain hidden'), while all details revealing Jimmy's death, Leo as shooter, Frank's sacrifice, and Bobby's paternity are confined to summarySpoilers, matching how bc-schatje notes these facts 'remain unknown until half way through the novel.'",
+        "sourceIds": [
+          "bc-schatje",
+          "bc-ryland"
+        ]
+      },
+      {
+        "name": "opinionAttribution",
+        "status": "supported",
+        "reason": "Each quote is an exact substring correctly attributed to its stated author/publication (e.g., Bentham's 'Romance fans who like a tangled love triangle...' and Munro's 'wickedly clever in her intentional obfuscation of her murder plot' both appear verbatim in their respective full texts), and none reveal spoiler content despite being marked containsSpoilers:false.",
+        "sourceIds": [
+          "bc-hns",
+          "bc-munro",
+          "bc-west",
+          "bc-ryland",
+          "bc-beans",
+          "bc-guada",
+          "bc-creek",
+          "bc-schatje",
+          "bc-seattle",
+          "bc-hidden-nook"
+        ]
+      },
+      {
+        "name": "pointGrounding",
+        "status": "supported",
+        "reason": "Most points are well-grounded and genuinely shared across sources (e.g., the miscommunication critique in bc-hns and bc-west, the melodramatic-twist critique merging bc-beans and bc-schatje); a couple of citations are loosely matched (e.g., bc-seattle's general 'weepy-eyed' quote used for the specific 'grief and forgiveness' point, and bc-munro's atmospheric 'scent of death' passage used for the 'withheld identity' point) but remain thematically consistent rather than contradictory.",
+        "sourceIds": [
+          "bc-hns",
+          "bc-west",
+          "bc-beans",
+          "bc-schatje",
+          "bc-seattle",
+          "bc-munro"
+        ]
+      }
+    ],
+    "model": "claude-sonnet-5",
+    "verifiedAt": "2026-09-09T19:35:49.012Z",
+    "releaseApproved": false
+  },
+  "releaseApproved": false
+}

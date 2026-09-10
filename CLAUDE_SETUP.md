@@ -1,6 +1,8 @@
 # Claude operator research guide
 
-This guide describes the implemented research tools as of 8 September 2026. They run locally, use the Anthropic API and write review evidence and reports to JSON files. They are not browser features or public Next.js API routes.
+This guide describes the implemented research tools as of 8 September 2026, updated 9 and 10 September 2026. Most of the commands below run locally, use the Anthropic API and write review evidence and reports to JSON files — they are not browser features or public Next.js API routes.
+
+The exception is the book summary/Reviews profile: `app/api/research/run-profile/[bookId]` runs the equivalent discover → propose → verify pipeline in-app, triggered from the "Run research now" button on the Reviews step's research panel (`components/BookProfileResearch.tsx`), with no command line involved. It uses `discoverReviewSources` in `lib/claude-research.ts`, which drives Claude's own `web_search`/`web_fetch` tools to find and capture real review pages itself rather than requiring a hand-assembled sources file, and stores its result in the `book_profile_drafts` table. See [RESEARCH_MILESTONE.md](RESEARCH_MILESTONE.md)'s "Automated review discovery — execution window and fallback positions" section for the known limitation on this route (Vercel's serverless execution-time ceiling) and the planned fallbacks if it times out in production.
 
 Research has been run for all three fixture books. A successful command is still not publication approval. Reports fail closed, write `releaseApproved: false`, and do not alter the app or promotion manifest automatically.
 
@@ -111,9 +113,9 @@ Every review is classified as View A, mixed/qualified, View B, not addressed or 
 
 Saved reports in `data/*research-preview.json` are manually prepared concise displays of completed runs. Adding a report does not make its wording editable or verified.
 
-The current draft admissions are the Kundera candidate and two Broken Country candidates (`beth-characterisation`, `prose-style`) declared in `lib/research-promotions.ts`. Each manifest entry binds the book, candidate, target card, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. The Admin Briefing shows **Use verified wording in draft** only for a matching manifest entry. Editing either member-facing text changes its status to **Verification expired** and prevents finalisation.
+The current draft admissions are the Kundera candidate and two Broken Country candidates (`beth-characterisation`, `prose-style`), live in the `research_promotions` Supabase table. `lib/research-promotions.ts` still exports the same three entries as `defaultResearchPromotions`, but that's now only a fallback for tests and call sites without a live list — the deployed app loads the manifest from the database via `lib/research-promotions-db.ts`. Each entry binds the book, candidate, target card, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. The Admin Briefing shows **Use verified wording in draft** only for a matching manifest entry. Editing either member-facing text changes its status to **Verification expired** and prevents finalisation.
 
-This browser-visible manifest demonstrates the interaction but is not a trusted production boundary. A production research service must repeat admission checks on the server. See [RESEARCH_MILESTONE.md](RESEARCH_MILESTONE.md).
+Admission is enforced server-side: `app/api/research/promote` checks the requesting user against `authorized_emails`, loads the live manifest from the database, and writes the resulting workspace state itself — not just in browser code. See [RESEARCH_MILESTONE.md](RESEARCH_MILESTONE.md) for what's still open in the broader production-release checklist.
 
 ## Outcome meanings
 

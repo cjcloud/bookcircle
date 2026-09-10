@@ -1,6 +1,6 @@
 # Source-fidelity milestone — SF-1
 
-Status: partially implemented; production release remains blocked. Reviewed 8 September 2026.
+Status: partially implemented; production release remains blocked, though less remains blocked than before — see "Work still required for production release" below. Reviewed 8 September 2026, updated 10 September 2026.
 
 SF-1 governs any wording presented as the result of review research. Accurate distillation is a fundamental product requirement. Human review may judge usefulness and expression, but it must not be used to excuse inaccurate representation of a source.
 
@@ -46,16 +46,29 @@ All generated research reports retain `releaseApproved: false`. Unsupported and 
 
 ## Current trust boundary
 
-Research commands run locally outside the browser. The Next.js app displays concise saved reports; it does not call Claude live, discover reviews or retrieve pages.
+Two research paths now exist side by side. The original operator commands (`scripts/research*.ts`, `scripts/discover-reviews.ts`, etc.) still run locally outside the browser and write to local JSON files, as described below. Separately, `app/api/research/run-profile/[bookId]` is a server-side, in-app route that runs the same kind of pipeline for a book's summary/review profile (genre, spoiler-aware summaries, opinions, positive/negative points) live, on request, from the Admin app's Reviews step — no local command line involved. It calls `discoverReviewSources` (Claude's own `web_search`/`web_fetch` tools finding and capturing real review pages), then `proposeBookProfile` and `verifyBookProfile`, and saves whatever the run produces to the `book_profile_drafts` table via `requireAuthorizedUser()` + `getDbClient()`, the same auth/DB pattern as every other API route. Nothing this route produces is released automatically — publishing to `book_profiles`/`review_points` still requires a separate authorized "Publish to app" action, gated on `verification.status === 'model_supported'` and a server-side re-check of the evidence digest.
 
-The admission manifest (Kundera, plus the two Broken Country candidates) proves the desired interaction locally. Each entry binds candidate ID, book, target question, collision, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. Because that manifest and its checks are shipped to the browser, it is not a trusted production security boundary.
+The admission manifest (Kundera, plus the two Broken Country candidates) uses the older collision-candidate workflow. Each entry binds candidate ID, book, target question, collision, category, exact proposition, exact supporting prompt, evidence digest, source IDs and verification date. **This is now a server-enforced trust boundary, not a demo**: the manifest lives in the `research_promotions` table, `app/api/research/promote` loads it live from Supabase, checks the requesting user against `authorized_emails` server-side, and writes the resulting workspace state itself — `lib/research-promotions.ts`'s exported array (`defaultResearchPromotions`) is now only a fallback used by tests and any call site that doesn't pass a live list, not what the deployed app actually admits against.
+
+### Automated review discovery — execution window and fallback positions
+
+`app/api/research/run-profile/[bookId]`'s `POST` handler runs discovery, proposal and verification synchronously inside one HTTP request, and can genuinely take several minutes (discovery alone involves the model searching and fetching multiple pages). The route declares `export const maxDuration = 300` to ask Vercel for as long an execution window as it can, but **that number is a request, not a guarantee**: Vercel serverless functions have a plan-dependent real ceiling, and a plan whose ceiling is shorter than 300 seconds (for example, a Hobby plan) will still cut the function off, regardless of what `maxDuration` asks for. This has only been exercised in local/dev testing so far (via the `device_bash` sandbox used in development) — it has not yet been run against an actual Vercel deployment, so whether it completes in production is currently unverified.
+
+If it does time out in production, the fallback positions, in order of preference, are:
+
+1. **Upgrade to a Vercel plan with a longer function-duration ceiling** (Pro or higher) and confirm `maxDuration = 300` (or whatever value fits) is actually honored under that plan. This requires no code change, only a plan/billing decision plus a production smoke test.
+2. **Split the pipeline into separate, shorter requests.** Break `discoverReviewSources` → `proposeBookProfile` → `verifyBookProfile` into three round trips from the client (or three route calls), persisting intermediate state (the discovered sources, then the proposal) to `book_profile_drafts` or a similar row between steps, so each individual request fits inside a shorter timeout even on a constrained plan.
+3. **Move the run off the request/response cycle entirely.** Queue the run as a background job (a Vercel Background Function / Cron-triggered worker, or an external worker process) that writes its result to `book_profile_drafts` when finished, and have the "Reviews" admin panel poll that table for completion instead of awaiting one long HTTP call end to end. This is the most robust option but the largest change, and is the natural next step if option 1 isn't available and option 2 proves awkward in practice.
+
+Whoever picks this back up should treat "confirm this route actually completes on the deployed Vercel plan" as the first verification step before relying on it in production, since local testing cannot exercise Vercel's real timeout behavior.
 
 Simulated fixture maps—drafted with ChatGPT/Codex during prototype development rather than extracted from reviews—may be finalised after their editorial checks pass. The exact locally admitted candidates (Kundera's ideas-and-felt-life, and Broken Country's beth-characterisation and prose-style) may also be finalised while their manifest bindings remain valid. No other saved research result is automatically admissible.
 
 ## Work still required for production release
 
-- Move research admission and finalisation enforcement to a trusted server.
-- Store immutable source snapshots, verification records and promotion manifests outside client-controlled state.
+- Move research admission and finalisation enforcement to a trusted server. **Done** for both paths: `app/api/research/promote` (collision candidates) and `app/api/research/publish-profile` (book profiles) both run server-side, re-check authorization and re-derive/verify the evidence digest rather than trusting the client.
+- Store immutable source snapshots, verification records and promotion manifests outside client-controlled state. **Done for what's been promoted/published** — `research_promotions`, `book_profiles` and `review_points` are Supabase tables, not client state. Note this doesn't yet cover the *un-promoted* saved research runs and evidence: `book_profile_drafts` and `research_sources`/`research_candidates` are writable by any authorized user and aren't immutable audit records in the same sense.
+- Confirm `app/api/research/run-profile/[bookId]` actually completes within Vercel's real serverless execution ceiling — see "Automated review discovery — execution window and fallback positions" below. Not yet verified against a live deployment.
 - Run a broad, documented acceptance evaluation across books, genres, favourable and critical reviews, and difficult qualification patterns.
 - Demonstrate that faithful syntheses pass and that invented disagreement, omitted qualifications, misleading excerpts, wrong attribution, duplicate reviews and changed wording fail.
 - Exercise inaccessible, changed and partially retrievable sources and confirm that they remain unresolved.

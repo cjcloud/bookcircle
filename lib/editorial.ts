@@ -1,6 +1,6 @@
 import { policyIssues } from './editorial-policy.ts';
 import type { Book, Collision, Diagnostics, Question } from './types.ts';
-import {getResearchPromotion} from './research-promotions.ts';
+import {getResearchPromotion,type ResearchPromotion,defaultResearchPromotions} from './research-promotions.ts';
 export const mandatoryDomains=['Writing / Style','Handling of Subjects'];
 const banned=['some readers','readers thought','critics','reviewers','the wider conversation','widely praised'];
 const countWords=(text:string)=>text.trim()?text.trim().split(/\s+/).length:0;
@@ -40,7 +40,7 @@ export function selectCollisions(collisions:Collision[],maxScored=6):Collision[]
   return chosen.slice(0,maxScored);
 }
 /** Boundary checks added by the local web adapter, beyond the original engine. */
-export function parseQuestions(value:unknown,book:Book):Question[]{
+export function parseQuestions(value:unknown,book:Book,promotions:ResearchPromotion[]=defaultResearchPromotions):Question[]{
   if(!Array.isArray(value)||value.length<1||value.length>20)throw Error('Expected 1–20 questions.');
   const allowed=new Set(book.questions.map(q=>q.id));
   const result=value.map((v:unknown)=>{
@@ -52,7 +52,7 @@ export function parseQuestions(value:unknown,book:Book):Question[]{
     if(q.collision_id!==null&&typeof q.collision_id!=='string')throw Error('Invalid collision ID.');
     if(typeof q.optional!=='boolean'||typeof q.locked!=='boolean')throw Error('Invalid question flags.');
     let research:Question['research'];
-    if(q.research!==undefined){const value=q.research as Record<string,unknown>;if(!value||typeof value!=='object'||typeof value.candidateId!=='string'||typeof value.evidenceDigest!=='string'||typeof value.admittedAt!=='string'||!getResearchPromotion(book.id,value.candidateId))throw Error('Invalid research admission.');research={candidateId:value.candidateId,evidenceDigest:value.evidenceDigest,admittedAt:value.admittedAt};}
+    if(q.research!==undefined){const value=q.research as Record<string,unknown>;if(!value||typeof value!=='object'||typeof value.candidateId!=='string'||typeof value.evidenceDigest!=='string'||typeof value.admittedAt!=='string'||!getResearchPromotion(book.id,value.candidateId,promotions))throw Error('Invalid research admission.');research={candidateId:value.candidateId,evidenceDigest:value.evidenceDigest,admittedAt:value.admittedAt};}
     return {id:q.id,collision_id:q.collision_id,proposition:q.proposition,subtext:q.subtext,category:q.category,question_type:q.question_type,optional:q.optional,locked:q.locked,...(research?{research}:{})} as Question;
   });
   if(new Set(result.map(q=>q.id)).size!==result.length)throw Error('Duplicate question IDs.');

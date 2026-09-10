@@ -9,6 +9,7 @@ interface Props {book:Book;state:Workspace;commit:(q:Question[],reason:string,to
 export default function Editor({book,state,commit,update,finish,notify}:Props){
  const [selected,setSelected]=useState(0),[pending,setPending]=useState<{questions:Question[];reason:string;tone?:Tone}|null>(null),[tone,setTone]=useState<Tone>(state.tone);
  const [chat,setChat]=useState('');const q=state.draft[selected]??state.draft[0],d=state.diagnostics;
+ if(!state.draft.length)return <article className="card"><h2>No opinion-map questions yet</h2><p>This book doesn't have a question set authored for it, so there's nothing to draft here yet. The Reviews step already works for it; Draft Opinion Map, the Chair preview, Meeting Capture and the Round-up need a question set authored for this book first.</p></article>;
  function suggest(action:'reword'|'replace'|'tone',collision?:string){try{
   const questions=action==='reword'?rewordQuestion(state.draft,q.id,book):action==='replace'?replaceQuestion(state.draft,q.id,book,collision??book.collisions.find(c=>!state.draft.some(x=>x.collision_id===c.id))?.id??''):adjustTone(state.draft,tone,book);
   if(JSON.stringify(questions)===JSON.stringify(state.draft)){notify('No wording changes proposed. Try another tone or unlock a card.');return;}

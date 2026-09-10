@@ -4,6 +4,20 @@ export interface SourceSnapshot {id:string;url:string;title:string;author:string
 export interface EvidenceClaim {position:'a'|'b';sourceId:string;passage:string;reasoning:string}
 export interface VerificationInput {positionA:string;positionB:string;memberWording:string;claims:EvidenceClaim[];sources:SourceSnapshot[]}
 const digest=(text:string)=>createHash('sha256').update(text).digest('hex');
+// See the matching comment in lib/profile-evidence.ts: a report round-tripped
+// through a jsonb column is not guaranteed to keep its original key order,
+// so inputDigest hashes a canonical (recursively key-sorted) form rather than
+// plain JSON.stringify(input), to stay content-derived only.
+function canonicalize(value:unknown):unknown{
+ if(Array.isArray(value))return value.map(canonicalize);
+ if(value&&typeof value==='object'){
+  const sorted:Record<string,unknown>={};
+  for(const key of Object.keys(value as Record<string,unknown>).sort())sorted[key]=canonicalize((value as Record<string,unknown>)[key]);
+  return sorted;
+ }
+ return value;
+}
+const stableStringify=(value:unknown)=>JSON.stringify(canonicalize(value));
 export function snapshotSource(input:Omit<SourceSnapshot,'digest'>):SourceSnapshot {
  for(const key of ['id','url','title','author','retrievedAt','text'] as const)if(typeof input[key]!=='string')throw Error('Invalid source field.');
  if(input.originEvidence!==undefined&&(!Array.isArray(input.originEvidence)||input.originEvidence.some(e=>!e||typeof e.url!=='string'||!/^https?:\/\//.test(e.url)||typeof e.text!=='string'||!e.text.trim())))throw Error('Invalid authorship evidence.');
@@ -30,5 +44,5 @@ export function prepareEvidence(input:VerificationInput){
  const used=input.sources.filter(s=>input.claims.some(c=>c.sourceId===s.id));
  const normalise=(s:string)=>s.toLowerCase().replace(/\s+/g,' ').trim();
  if(new Set(used.map(s=>digest(normalise(s.text)))).size<2)issues.push('At least two distinct source texts are required; duplicated reviews are insufficient.');
- return {status:issues.length?'unresolved' as const:'ready_for_verification' as const,issues,contexts,inputDigest:digest(JSON.stringify(input))};
+ return {status:issues.length?'unresolved' as const:'ready_for_verification' as const,issues,contexts,inputDigest:digest(stableStringify(input))};
 }

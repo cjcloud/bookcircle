@@ -5,7 +5,7 @@ export interface ResearchPromotion {
   proposition:string;subtext:string;evidenceDigest:string;verifiedAt:string;sources:string[];
 }
 
-export const researchPromotions:ResearchPromotion[]=[{
+export const defaultResearchPromotions:ResearchPromotion[]=[{
   bookId:'kundera',candidateId:'ideas-and-felt-life',targetQuestionId:'ku-q1',collisionId:'ku-c1',category:'Ideas / Values',
   proposition:"The novel's philosophical and political ideas strengthen its emotional effect.",
   subtext:"Do the novel's philosophical and political ideas deepen its emotional power, or sometimes leave too little room for the characters' felt lives?",
@@ -25,17 +25,23 @@ export const researchPromotions:ResearchPromotion[]=[{
   verifiedAt:'2026-09-08T21:25:55.300Z',sources:['bc-seattle','bc-beans']
 }];
 
-export function getResearchPromotion(bookId:string,candidateId:string){return researchPromotions.find(item=>item.bookId===bookId&&item.candidateId===candidateId);}
+/** All functions below take an optional trailing `promotions` list, defaulting to
+ * defaultResearchPromotions (the historical local fixture set). This keeps every
+ * existing call site and test working unchanged, while the deployed app's API
+ * routes (app/api/workspace/[bookId]/route.ts) pass the live list loaded from
+ * the research_promotions table instead, so the database — not this file — is
+ * the source of truth for what's actually deployed. */
+export function getResearchPromotion(bookId:string,candidateId:string,promotions:ResearchPromotion[]=defaultResearchPromotions){return promotions.find(item=>item.bookId===bookId&&item.candidateId===candidateId);}
 
-export function admitResearchCandidate(draft:Question[],bookId:string,candidateId:string,now=new Date().toISOString()):Question[]{
-  const promotion=getResearchPromotion(bookId,candidateId);if(!promotion)throw Error('This candidate is not approved for draft admission.');
+export function admitResearchCandidate(draft:Question[],bookId:string,candidateId:string,now=new Date().toISOString(),promotions:ResearchPromotion[]=defaultResearchPromotions):Question[]{
+  const promotion=getResearchPromotion(bookId,candidateId,promotions);if(!promotion)throw Error('This candidate is not approved for draft admission.');
   const target=draft.find(question=>question.id===promotion.targetQuestionId);if(!target)throw Error('The matching draft card is unavailable.');
   if(target.locked)throw Error('Unlock the matching draft card before admitting this research.');
   return draft.map(question=>question.id===target.id?{...question,collision_id:promotion.collisionId,category:promotion.category,proposition:promotion.proposition,subtext:promotion.subtext,research:{candidateId,evidenceDigest:promotion.evidenceDigest,admittedAt:now}}:structuredClone(question));
 }
 
-export function researchAdmissionState(question:Question,bookId:string):'none'|'verified'|'expired'{
-  if(!question.research)return 'none';const promotion=getResearchPromotion(bookId,question.research.candidateId);
+export function researchAdmissionState(question:Question,bookId:string,promotions:ResearchPromotion[]=defaultResearchPromotions):'none'|'verified'|'expired'{
+  if(!question.research)return 'none';const promotion=getResearchPromotion(bookId,question.research.candidateId,promotions);
   if(!promotion||question.research.evidenceDigest!==promotion.evidenceDigest)return 'expired';
   return question.id===promotion.targetQuestionId&&question.collision_id===promotion.collisionId&&question.category===promotion.category&&question.proposition===promotion.proposition&&question.subtext===promotion.subtext?'verified':'expired';
 }

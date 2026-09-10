@@ -41,3 +41,40 @@ test('verification preserves rejection and never grants release approval',async(
  const result=await verifyCollision(input,async()=>reply({checks}));assert.equal(result.status,'unsupported');assert.ok('releaseApproved' in result&&result.releaseApproved===false);
  await assert.rejects(verifyCollision(input,async()=>reply({checks:checks.slice(1)})),/Incomplete/);
 }));
+
+import {proposeBookProfile} from '../lib/claude-research.ts';
+test('an individually unverifiable opinion or point is dropped rather than failing the whole profile',async()=>mockSettings(async()=>{
+ const sources=[
+  snapshotSource({id:'p1',url:'https://example.com/p1',title:'P1',author:'P1',retrievedAt:'2026-09-08',text:'A tense, atmospheric thriller with a slow middle section.',textScope:'full_review'}),
+  snapshotSource({id:'p2',url:'https://example.com/p2',title:'P2',author:'P2',retrievedAt:'2026-09-08',text:'The pacing is sluggish for long stretches. The ending redeems it.',textScope:'full_review'}),
+ ];
+ const proposal={
+  genre:'Thriller',
+  summaryNoSpoilers:'A detective investigates a disappearance.',
+  summarySpoilers:'A detective investigates a disappearance and finds her partner responsible.',
+  opinions:[
+   {sourceId:'p1',author:'A',publication:'Pub A',quote:'A tense, atmospheric thriller',containsSpoilers:false},
+   {sourceId:'p1',author:'B',publication:'Pub B',quote:'This exact phrase was never written by anyone.',containsSpoilers:false},
+  ],
+  points:[{sentiment:'negative',text:'The pacing drags.',evidence:[
+   {sourceId:'p1',passage:'a slow middle section'},
+   {sourceId:'p2',passage:'The pacing is sluggish for long stretches'},
+   {sourceId:'p2',passage:'a fabricated passage nobody wrote'},
+  ]}],
+ };
+ const result=await proposeBookProfile(sources,async()=>reply(proposal));
+ assert.equal(result.opinions.length,1);
+ assert.equal(result.opinions[0].author,'A');
+ assert.equal(result.points.length,1);
+ assert.equal(result.points[0].evidence.length,2);
+ assert.deepEqual(result.points[0].evidence.map(e=>e.sourceId).sort(),['p1','p2']);
+}));
+test('a profile left with zero opinions after filtering still fails',async()=>mockSettings(async()=>{
+ const sources=[snapshotSource({id:'p1',url:'https://example.com/p1',title:'P1',author:'P1',retrievedAt:'2026-09-08',text:'A tense, atmospheric thriller.',textScope:'full_review'})];
+ const proposal={
+  genre:'Thriller',summaryNoSpoilers:'A summary.',summarySpoilers:'A fuller summary.',
+  opinions:[{sourceId:'p1',author:'A',publication:'Pub A',quote:'Never actually written anywhere.',containsSpoilers:false}],
+  points:[{sentiment:'negative',text:'A point.',evidence:[{sourceId:'p1',passage:'A tense, atmospheric thriller.'}]}],
+ };
+ await assert.rejects(proposeBookProfile(sources,async()=>reply(proposal)));
+}));
