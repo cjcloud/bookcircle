@@ -78,7 +78,7 @@ create table if not exists research_promotions (
 -- app-layer checks in API routes are defense in depth on top of this,
 -- not the only enforcement.
 create or replace function is_authorized() returns boolean
-language sql stable
+language sql stable security definer set search_path = public
 as $$
   select exists (
     select 1 from authorized_emails
