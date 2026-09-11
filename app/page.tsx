@@ -15,6 +15,8 @@ export default async function Page(){
   console.log('[bcb-debug] is_authorized() rpc ->',isAuthRpc,'error:',isAuthErr?.message??null,isAuthErr?.code??'');
   const rawBooks=await supabase.from('books').select('id,book_title');
   console.log('[bcb-debug] raw books select -> data:',JSON.stringify(rawBooks.data),'error:',rawBooks.error?.message??null,rawBooks.error?.code??'','status:',rawBooks.status);
+  const {data:whoami,error:whoamiErr}=await supabase.rpc('debug_whoami');
+  console.log('[bcb-debug] debug_whoami ->',JSON.stringify(whoami),'error:',whoamiErr?.message??null,whoamiErr?.code??'');
   let books;
   try{
     books=await loadAllBooks(supabase);
