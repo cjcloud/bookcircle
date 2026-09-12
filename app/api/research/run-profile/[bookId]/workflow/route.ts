@@ -1,5 +1,5 @@
 import { serve } from '@upstash/workflow/nextjs';
-import { getDbClient } from '@/lib/supabase/dbClient';
+import { createAdminClient } from '@/lib/supabase/admin';
 import { loadAllBooks } from '@/lib/books-db';
 import { saveDraftReport, loadDraftReport, setDraftRunStatus } from '@/lib/book-profile-db';
 import { discoverReviewSources, proposeBookProfile, verifyBookProfile } from '@/lib/claude-research';
@@ -23,7 +23,21 @@ import { discoverReviewSources, proposeBookProfile, verifyBookProfile } from '@/
  * This route must never be called directly by the browser -- only
  * ../route.ts's POST handler starts a run, via the Upstash Client's
  * trigger(), which is how QStash learns this URL and this bookId/email
- * payload in the first place. */
+ * payload in the first place.
+ *
+ * Every DB call here uses createAdminClient() (service-role, bypasses
+ * RLS), not getDbClient()/createClient() -- QStash's callback carries no
+ * browser session cookie at all, so the RLS-respecting client would have
+ * no auth.jwt() email for is_authorized() to check, and every read/write
+ * against an RLS-protected table (books, book_profile_drafts, ...) would
+ * silently return nothing. That's exactly what broke the very first real
+ * run: a fixture book (hardcoded in lib/books.ts, never gated by RLS)
+ * looked fine, but an in-app-added book (a real row in the `books` table)
+ * failed at the very first step with "Unknown book." This is safe here
+ * specifically because this route can only ever be triggered by
+ * ../route.ts's POST handler *after* it already ran requireAuthorizedUser()
+ * -- the authorization decision was made before the job was ever queued,
+ * this step just needs to actually see the data. */
 export const maxDuration = 300;
 
 interface WorkflowPayload {
@@ -35,14 +49,14 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
   const { bookId, email } = context.requestPayload;
 
   const book = await context.run('load-book', async () => {
-    const supabase = await getDbClient();
+    const supabase = createAdminClient();
     const found = (await loadAllBooks(supabase)).find((b) => b.id === bookId);
     if (!found) throw new Error('Unknown book.');
     return { title: found.book_title, author: found.author };
   });
 
   await context.run('mark-running', async () => {
-    const supabase = await getDbClient();
+    const supabase = createAdminClient();
     await setDraftRunStatus(supabase, bookId, 'running', email);
   });
 
@@ -57,7 +71,7 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
       verifyBookProfile(proposal));
 
     await context.run('save-success', async () => {
-      const supabase = await getDbClient();
+      const supabase = createAdminClient();
       const report = {
         bookId,
         generatedAt: new Date().toISOString(),
@@ -78,7 +92,7 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
     // tell the difference between "no run yet" and "last run failed but
     // an older successful one is still shown".
     await context.run('save-failure', async () => {
-      const supabase = await getDbClient();
+      const supabase = createAdminClient();
       const message = runError instanceof Error ? runError.message : 'The research run failed.';
       const existing = await loadDraftReport(supabase, bookId);
       const existingHadProposal = !!(existing?.report as { proposal?: unknown } | undefined)?.proposal;
