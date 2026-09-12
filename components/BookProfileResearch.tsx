@@ -62,7 +62,13 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
   const [starting, setStarting] = useState(false);
   const [publishing, setPublishing] = useState(false);
   const [notice, setNotice] = useState('');
+  const [justCompleted, setJustCompleted] = useState(false);
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  // Tracks whether the run we're watching was busy on the previous check,
+  // so a poll landing on 'done' can tell "this run just finished" apart
+  // from "this book already had a finished report before I ever looked" —
+  // the latter shouldn't claim a fresh success every time the page loads.
+  const wasBusyRef = useRef(false);
 
   function stopPolling() {
     if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; }
@@ -77,6 +83,8 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
     try {
       const res = await fetch(`/api/research/run-profile/${bookId}`);
       const json = await res.json();
+      if (wasBusyRef.current && json.runStatus === 'done') setJustCompleted(true);
+      wasBusyRef.current = json.runStatus === 'queued' || json.runStatus === 'running';
       setReport(json.report ?? null);
       setRunStatus(json.runStatus ?? 'idle');
       setRunError(json.runError ?? null);
@@ -90,10 +98,15 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
+    setJustCompleted(false);
     fetch(`/api/research/run-profile/${bookId}`)
       .then((res) => res.json())
       .then((json) => {
         if (cancelled) return;
+        // A report already sitting there when the page loads was never
+        // "just" completed by anything this tab did — only a poll that
+        // watched a busy -> done transition itself should claim that.
+        wasBusyRef.current = json.runStatus === 'queued' || json.runStatus === 'running';
         setReport(json.report ?? null);
         setRunStatus(json.runStatus ?? 'idle');
         setRunError(json.runError ?? null);
@@ -109,6 +122,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
   async function runNow() {
     setStarting(true);
     setNotice('');
+    setJustCompleted(false);
     try {
       const res = await fetch(`/api/research/run-profile/${bookId}`, { method: 'POST' });
       const json = await res.json();
@@ -116,6 +130,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
       setRunStatus('queued');
       setRunError(null);
       setRunUpdatedAt(new Date().toISOString());
+      wasBusyRef.current = true;
       startPolling();
     } catch (e) {
       setNotice((e as Error).message);
@@ -169,6 +184,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
 
   const { proposal, verification } = report;
   return <div>
+    {justCompleted && <div className="opinion-balance">Research completed successfully — the results below are from this run.</div>}
     <span className={`tag research-status ${verification.status}`}>{statusLabel[verification.status] ?? verification.status}</span>
     <p className="hint">Run: {new Date(report.generatedAt).toLocaleString('en-GB')} · {report.model} · {report.sourceCount} sources</p>
     {isBusy && <p className="hint">{runStatusLabel[runStatus]} Showing the last completed run below until this one finishes.</p>}
