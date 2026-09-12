@@ -37,8 +37,21 @@ export async function middleware(request: NextRequest) {
   // gate the same way /login is. verifyOtp itself runs client-side
   // straight against Supabase, so no other API route needs this.
   const isAuthApiRoute = request.nextUrl.pathname.startsWith('/api/auth/');
+  // Same idea for the research workflow's own callback route: it's never
+  // called by a signed-in browser, only by Upstash's QStash servers
+  // between pipeline steps (see app/api/research/run-profile/[bookId]/workflow/route.ts),
+  // which never carries our session cookie. Without this exemption every
+  // QStash callback got redirected here to /login and then rejected with
+  // a 405 (a POST redirected to a GET-only page) before the pipeline ever
+  // ran a single step. That route already authenticates the caller itself
+  // — serve() verifies QStash's own request signature — and the run was
+  // only ever queued in the first place after ../route.ts's POST handler
+  // ran requireAuthorizedUser(), so this isn't skipping authorization,
+  // just using the right mechanism for a server-to-server call instead of
+  // a cookie a non-browser caller could never have.
+  const isResearchWorkflowRoute = /^\/api\/research\/run-profile\/[^/]+\/workflow$/.test(request.nextUrl.pathname);
 
-  if (!user && !isLoginRoute && !isAuthApiRoute) {
+  if (!user && !isLoginRoute && !isAuthApiRoute && !isResearchWorkflowRoute) {
     const url = request.nextUrl.clone();
     url.pathname = '/login';
     return NextResponse.redirect(url);
