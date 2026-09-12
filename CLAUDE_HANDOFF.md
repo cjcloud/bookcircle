@@ -1,6 +1,10 @@
 # Book Club Briefing — Claude handoff
 
-Prepared: 8 September 2026. Updated: 10 September 2026.
+Prepared: 8 September 2026. Updated: 12 September 2026.
+
+## Current deployment
+
+Live at `https://bookcircle-ten.vercel.app` (Vercel Hobby plan, Fluid Compute). Source at `github.com/cjcloud/bookcircle` (public repo). Supabase project ref `kuzpvtmzccskjvxudout`. The user's local checkout is `C:\Users\CJ\Dev\Bookcircle`, reached in a Claude session via the remote-devices bridge — as of 12 September `device_bash` (a local shell on that machine) is unavailable (a Windows update broke it; Claude Code itself is unaffected), so any file edit has to go through the stage → edit-in-the-cloud-sandbox → commit-back cycle (`device_stage_files` / `device_commit_files`), and the user runs git/npm/Supabase-CLI commands themselves in their own PowerShell and pastes back the output. **`device_commit_files` has silently reported success without the write actually landing more than once this session** — always re-stage and diff the file against what you meant to write before telling the user to commit/push.
 
 ## Product objective
 
@@ -59,7 +63,7 @@ Any authorized user can add a book by title and author from the sidebar (`+ Add 
 Two research paths exist side by side, both using Claude, both fail-closed (propose → independently verify → only a `model_supported` result can be published):
 
 1. **Collision-candidate research** (fixture books only): operator-run commands (`scripts/research*.ts`) for discovery, full-page retrieval, source screening, synthesis and independent verification, writing to local JSON files during development. The resulting candidates are promoted into the shared `research_promotions` table and admitted into a book's draft via `app/api/research/promote`, which is fully server-enforced (loads the live promotion list from the database, checks the requesting user is authorized, and writes the result to the shared `workspaces` row) — this is a real production trust boundary, not a demo.
-2. **Book-profile research** (any book, including one added in-app): `app/api/research/run-profile/[bookId]`, triggered from the "Run research now"/"Run research again" button on the Reviews step. It calls `discoverReviewSources` (Claude's own `web_search`/`web_fetch` tools find and capture real review pages — no hand-assembled sources file), then `proposeBookProfile` and `verifyBookProfile`, and saves the result (success or failure) to `book_profile_drafts`. Publishing to the live `book_profiles`/`review_points` tables requires a separate "Publish to app" action gated on `verification.status === 'model_supported'`, which re-derives and checks the evidence digest server-side rather than trusting the client.
+2. **Book-profile research** (any book, including one added in-app): triggered from the "Run research now"/"Run research again" button on the Reviews step. As of 12 September this runs as a background job, not inline in one request — see "Research pipeline is now a background job" below for why and how. It calls `discoverReviewSources` (Claude's own `web_search`/`web_fetch` tools find and capture real review pages — no hand-assembled sources file), then `proposeBookProfile` and `verifyBookProfile`, and saves the result (success or failure) to `book_profile_drafts`. Publishing to the live `book_profiles`/`review_points` tables requires a separate "Publish to app" action gated on `verification.status === 'model_supported'`, which re-derives and checks the evidence digest server-side rather than trusting the client.
 
 Evidence is bound to complete captured text, exact passages and content digests in both paths. Failures remain unresolved or unsupported and are never silently treated as success.
 
@@ -72,6 +76,24 @@ Saved pilot reports (from the original operator-run pipeline) cover:
 All three of those candidates (Kundera's ideas-and-felt-life, Broken Country's beth-characterisation and prose-style) are live in the `research_promotions` table and admissible from the Admin Briefing's **Use verified wording in draft** control.
 
 [RESEARCH_MILESTONE.md](RESEARCH_MILESTONE.md) defines the source-fidelity gate and the current trust boundary in full. [CLAUDE_SETUP.md](CLAUDE_SETUP.md) documents all operator commands, the in-app Reviews pipeline, and file formats.
+
+## Research pipeline is now a background job (12 September)
+
+`app/api/research/run-profile/[bookId]`'s `POST` handler used to run `discover -> propose -> verify` synchronously inside one Vercel request. In production on the Hobby plan this reliably hit a `504 FUNCTION_INVOCATION_TIMEOUT` after exactly 300 seconds (confirmed live in Vercel Logs) — the earlier "it works" impression came from the panel showing an old cached draft, not a genuinely completed run. Fixed by moving the pipeline to [Upstash Workflow](https://upstash.com/docs/workflow), chosen over a Vercel Pro upgrade or hand-splitting the pipeline into multiple UI-driven requests because the research is user-initiated and non-real-time (no periodicity, checked back on later), which is exactly what a background job is for:
+
+- `app/api/research/run-profile/[bookId]/route.ts`'s `POST` now just records `run_status = 'queued'` and calls the Upstash `Client`'s `trigger()`, returning in well under a second. `GET` also returns `runStatus`/`runError`/`runUpdatedAt` alongside the last completed report.
+- `app/api/research/run-profile/[bookId]/workflow/route.ts` is the actual pipeline, using `serve()` from `@upstash/workflow/nextjs`. Each stage (`load-book`, `mark-running`, `discover`, `propose`, `verify`, `save-success`/`save-failure`) is its own `context.run()` step — a separate short Vercel invocation QStash orchestrates between calls, so no single call has to run all three stages back to back.
+- `components/BookProfileResearch.tsx` polls `GET` every 5 seconds while a run is `queued`/`running` instead of awaiting one long request, and shows a "Research completed successfully" banner specifically when a run it watched transitions to `done` (not on every page load of an already-researched book).
+- Requires `QSTASH_TOKEN`, `QSTASH_CURRENT_SIGNING_KEY`, `QSTASH_NEXT_SIGNING_KEY` (free Upstash account) as env vars, both locally (`.env.local`, gitignored) and in Vercel.
+- `supabase/migrations/0005_book_profile_run_status.sql` adds `run_status`/`run_error`/`run_updated_at` to `book_profile_drafts` and makes `report`/`status` nullable (a queued run has no report yet). `0006_reset_stale_research_runs.sql` was a one-off cleanup for rows stuck by the bugs below.
+
+**Three real bugs only surfaced by testing this for real in production — worth knowing before touching this again:**
+
+1. `middleware.ts` gates every route behind a signed-in browser session, but QStash's callback into `.../workflow` carries no session cookie at all — it was getting redirected to `/login` and rejected with a `405` (a POST redirected to a GET-only page) before the pipeline ever ran a single step. Fixed with an explicit `isResearchWorkflowRoute` exemption in `middleware.ts`, safe because that route verifies QStash's own request signature and can only ever be triggered by `../route.ts`'s `POST` handler after it already ran `requireAuthorizedUser()`.
+2. The workflow route was using `getDbClient()` (the RLS-respecting, cookie-based client) — but QStash's callback has no session, so RLS silently returned nothing for any query. A fixture book (hardcoded in `lib/books.ts`) looked fine; an in-app-added book (a real row in the `books` table) failed at the very first step with "Unknown book." Fixed by switching every DB call in the workflow route to `createAdminClient()` (service-role, bypasses RLS) — safe here because authorization was already checked before the job was ever queued.
+3. When a run fails before its own step-level error handling ever gets a chance to run (exactly what both bugs above caused), `run_status` gets stuck at `'queued'`/`'running'` forever, and the button stays disabled with no way to retry. Fixed in `components/BookProfileResearch.tsx`: a run still showing `queued`/`running` after 15 minutes (`STALE_AFTER_MS`) is treated as abandoned, re-enabling the button, rather than trusted as genuinely in flight.
+
+Debugging this relies on two places, not one: Vercel Logs (as before) and the Upstash Console's **Workflow → Logs** tab, which shows a step-by-step trace of exactly where a run is or failed — essential for diagnosing anything in this pipeline going forward.
 
 ## Lessons from real use this session (worth reading before changing the research pipeline)
 
@@ -91,8 +113,14 @@ The most valuable next work is:
 4. Evaluate candidate wording manually for logic and clarity even after source verification passes.
 5. Run the broad acceptance evaluation listed in `RESEARCH_MILESTONE.md`.
 6. Keep overall Goodreads/StoryGraph appreciation separate from critical-sample counts and collision coverage. Never compute a median or consensus for a discussion polarity.
-7. Confirm `app/api/research/run-profile/[bookId]` actually completes within Vercel's real serverless execution ceiling in production — it has only been exercised in local/dev testing so far. See RESEARCH_MILESTONE.md's "Automated review discovery — execution window and fallback positions".
-8. Configure a custom SMTP provider for Supabase Auth before relying on the whitelist+OTP sign-in for more than the odd manual test — the default sender is capped at roughly 2 emails/hour.
+
+Resolved since the list above was written:
+
+- ~~Confirm `app/api/research/run-profile/[bookId]` actually completes within Vercel's real serverless execution ceiling in production.~~ It didn't (confirmed 504 in production); the pipeline now runs as an Upstash Workflow background job instead of inline. See "Research pipeline is now a background job" above.
+
+Deliberately not pursuing (a decision, not a gap):
+
+- **Custom SMTP for Supabase Auth.** The user considered Resend/Postmark/SendGrid and chose to stay on Supabase's default sender, accepting its ~2 emails/hour rate limit as a workable constraint rather than add a custom domain. Don't reopen this unless the user raises it again.
 
 ## Non-negotiable safeguards
 
@@ -132,7 +160,12 @@ The current suite contains 83 passing checks. Webpack is deliberately selected i
 - `lib/book-profile-db.ts`: published book profiles/review points, and saved Reviews-step research drafts.
 - `lib/research-promotions.ts` / `lib/research-promotions-db.ts`: candidate admission logic and its live database-backed source of truth.
 - `scripts/research-book.ts`: whole-book research-map prompt (operator-run collision path).
-- `supabase/migrations/`: `0001_init.sql` (auth whitelist, workspaces, research tables), `0002_book_profiles.sql`, `0003_book_profile_drafts.sql`, `0004_books.sql` (in-app-added books).
+- `app/api/research/run-profile/[bookId]/workflow/route.ts`: the actual discover/propose/verify pipeline, run as an Upstash Workflow background job (see above). `../route.ts` only queues it and reports status.
+- `supabase/migrations/`: `0001_init.sql` (auth whitelist, workspaces, research tables), `0002_book_profiles.sql`, `0003_book_profile_drafts.sql`, `0004_books.sql` (in-app-added books), `0005_book_profile_run_status.sql` / `0006_reset_stale_research_runs.sql` (background-job run-status tracking).
+
+## Database migrations: use the Supabase CLI, not the SQL Editor
+
+As of 12 September this project is linked via the Supabase CLI (`npx supabase link --project-ref kuzpvtmzccskjvxudout`, already done on the user's machine). Migrations 0001–0004 were originally applied by hand in the SQL Editor and then marked as already-applied via `npx supabase migration repair --status applied <version>` so the CLI's history matches reality without re-running them. **From here on, a new migration file just needs `npx supabase db push`** — the user has no local Postgres/SQL experience and should not be asked to paste SQL into the dashboard again. Sanity-check with `npx supabase migration list` if local/remote history ever looks like it might have drifted.
 
 ## Transfer hygiene
 
