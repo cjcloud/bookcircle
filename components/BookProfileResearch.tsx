@@ -43,11 +43,21 @@ const runStatusLabel: Record<string, string> = {
 };
 
 const POLL_MS = 5000;
+// Generous upper bound on a real run: discover/propose/verify each fit
+// well inside Vercel's 300s ceiling individually, but leave headroom for
+// QStash hand-off delays between steps. A run still showing 'queued' or
+// 'running' past this is almost certainly dead (a crashed step, a bug
+// like the middleware 405 that blocked every callback before the pipeline
+// ever started) rather than genuinely working — and without this check
+// the "Run research now" button stays disabled forever with no way to
+// retry, since nothing else ever flips run_status back off 'queued'.
+const STALE_AFTER_MS = 15 * 60 * 1000;
 
 export default function BookProfileResearch({ bookId }: { bookId: string }) {
   const [report, setReport] = useState<ProfileReport | null>(null);
   const [runStatus, setRunStatus] = useState('idle');
   const [runError, setRunError] = useState<string | null>(null);
+  const [runUpdatedAt, setRunUpdatedAt] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
   const [starting, setStarting] = useState(false);
   const [publishing, setPublishing] = useState(false);
@@ -70,6 +80,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
       setReport(json.report ?? null);
       setRunStatus(json.runStatus ?? 'idle');
       setRunError(json.runError ?? null);
+      setRunUpdatedAt(json.runUpdatedAt ?? null);
       if (json.runStatus !== 'queued' && json.runStatus !== 'running') stopPolling();
     } catch {
       // A transient poll failure isn't worth surfacing — the next tick tries again.
@@ -86,6 +97,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
         setReport(json.report ?? null);
         setRunStatus(json.runStatus ?? 'idle');
         setRunError(json.runError ?? null);
+        setRunUpdatedAt(json.runUpdatedAt ?? null);
         if (json.runStatus === 'queued' || json.runStatus === 'running') startPolling();
       })
       .catch(() => { if (!cancelled) setNotice('Could not load the latest research run.'); })
@@ -103,6 +115,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
       if (!res.ok) throw Error(json.error || 'Could not start the research run.');
       setRunStatus('queued');
       setRunError(null);
+      setRunUpdatedAt(new Date().toISOString());
       startPolling();
     } catch (e) {
       setNotice((e as Error).message);
@@ -110,6 +123,14 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
       setStarting(false);
     }
   }
+
+  // A run reporting 'queued'/'running' that hasn't updated in
+  // STALE_AFTER_MS is treated as abandoned rather than genuinely in
+  // flight, so the button doesn't stay disabled forever if a step ever
+  // crashes without getting the chance to record its own failure (exactly
+  // what happened once already — see supabase/migrations/0006_reset_stale_research_runs.sql).
+  const isStale = (runStatus === 'queued' || runStatus === 'running') && !!runUpdatedAt
+    && Date.now() - new Date(runUpdatedAt).getTime() > STALE_AFTER_MS;
 
   async function publish() {
     if (!report) return;
@@ -131,7 +152,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
     }
   }
 
-  const isBusy = runStatus === 'queued' || runStatus === 'running';
+  const isBusy = (runStatus === 'queued' || runStatus === 'running') && !isStale;
   const runButton = <button className="secondary" disabled={starting || isBusy} onClick={runNow}>
     {isBusy ? (runStatusLabel[runStatus] ?? 'Working…') : starting ? 'Starting…' : report ? 'Run research again' : 'Run research now'}
   </button>;
@@ -141,6 +162,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
   if (!report) return <div>
     <p className="hint">No research has been run for this book yet. This searches the web for reviews, reads them, and drafts the profile — no files or command line needed. It runs in the background, so you can navigate away and check back later.</p>
     {runButton}
+    {isStale && <p className="hint">The last run seems to have stalled without finishing — you can safely try again.</p>}
     {runStatus === 'failed' && runError && <p className="hint">The last attempt failed: {runError}</p>}
     {notice && <p className="hint">{notice}</p>}
   </div>;
@@ -150,6 +172,7 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
     <span className={`tag research-status ${verification.status}`}>{statusLabel[verification.status] ?? verification.status}</span>
     <p className="hint">Run: {new Date(report.generatedAt).toLocaleString('en-GB')} · {report.model} · {report.sourceCount} sources</p>
     {isBusy && <p className="hint">{runStatusLabel[runStatus]} Showing the last completed run below until this one finishes.</p>}
+    {isStale && <p className="hint">The last run seems to have stalled without finishing — you can safely try again. Showing the last successful run below.</p>}
     {runStatus === 'failed' && runError && <p className="hint">The last attempt failed: {runError} Showing the last successful run below.</p>}
     {!proposal && <div className="opinion-balance blocked-balance"><strong>No profile produced</strong><p>{verification.reason ?? 'The pipeline did not return a usable profile.'}</p></div>}
     {proposal && <>

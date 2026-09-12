@@ -60,6 +60,7 @@ export async function GET(_request: Request, { params }: { params: Promise<{ boo
       report: draft?.report ?? null,
       runStatus: draft?.runStatus ?? 'idle',
       runError: draft?.runError ?? null,
+      runUpdatedAt: draft?.runUpdatedAt ?? null,
     });
   } catch (error) {
     if (error instanceof UnauthorizedError) return Response.json({ error: error.message }, { status: 401 });
