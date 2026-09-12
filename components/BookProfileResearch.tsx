@@ -1,15 +1,22 @@
 'use client';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 /** Sibling to ResearchPilot.tsx: fetches the latest automated research run
  * for this book from app/api/research/run-profile/[bookId] (GET) on
  * mount, and offers a "Run research now" button (POST to the same route)
- * that drives the whole discover -> propose -> verify pipeline with no
- * command line involved — discoverReviewSources in lib/claude-research.ts
- * uses Claude's own web_search + web_fetch tools to find and capture real
- * review pages itself. A run can take a couple of minutes; the button
- * disables and shows a busy note while it's in flight rather than
- * assuming it'll be fast.
+ * that starts the whole discover -> propose -> verify pipeline in the
+ * background -- discoverReviewSources in lib/claude-research.ts uses
+ * Claude's own web_search + web_fetch tools to find and capture real
+ * review pages itself.
+ *
+ * This is deliberately not real-time: POST just queues the run (via
+ * app/api/research/run-profile/[bookId]/workflow, an Upstash Workflow
+ * background job) and returns immediately, and this component polls GET
+ * every few seconds afterwards to learn when it finishes. A run can take
+ * a couple of minutes; the panel stays usable and navigable while it's in
+ * flight rather than blocking on one long request the way it used to
+ * (which is what was hitting Vercel's serverless time limit in
+ * production -- see RESEARCH_MILESTONE.md).
  *
  * Publishing is unchanged: the "Publish to app" button only appears once
  * verification.status === 'model_supported', and still goes through
@@ -30,36 +37,77 @@ const statusLabel: Record<string, string> = {
   unresolved: 'Needs another check',
 };
 
+const runStatusLabel: Record<string, string> = {
+  queued: 'Queued — waiting to start…',
+  running: 'Running — searching and reading reviews online. This can take a few minutes; feel free to navigate away and come back.',
+};
+
+const POLL_MS = 5000;
+
 export default function BookProfileResearch({ bookId }: { bookId: string }) {
   const [report, setReport] = useState<ProfileReport | null>(null);
+  const [runStatus, setRunStatus] = useState('idle');
+  const [runError, setRunError] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [running, setRunning] = useState(false);
+  const [starting, setStarting] = useState(false);
   const [publishing, setPublishing] = useState(false);
   const [notice, setNotice] = useState('');
+  const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+
+  function stopPolling() {
+    if (pollRef.current) { clearInterval(pollRef.current); pollRef.current = null; }
+  }
+
+  function startPolling() {
+    stopPolling();
+    pollRef.current = setInterval(poll, POLL_MS);
+  }
+
+  async function poll() {
+    try {
+      const res = await fetch(`/api/research/run-profile/${bookId}`);
+      const json = await res.json();
+      setReport(json.report ?? null);
+      setRunStatus(json.runStatus ?? 'idle');
+      setRunError(json.runError ?? null);
+      if (json.runStatus !== 'queued' && json.runStatus !== 'running') stopPolling();
+    } catch {
+      // A transient poll failure isn't worth surfacing — the next tick tries again.
+    }
+  }
 
   useEffect(() => {
     let cancelled = false;
     setLoading(true);
     fetch(`/api/research/run-profile/${bookId}`)
       .then((res) => res.json())
-      .then((json) => { if (!cancelled) setReport(json.report ?? null); })
+      .then((json) => {
+        if (cancelled) return;
+        setReport(json.report ?? null);
+        setRunStatus(json.runStatus ?? 'idle');
+        setRunError(json.runError ?? null);
+        if (json.runStatus === 'queued' || json.runStatus === 'running') startPolling();
+      })
       .catch(() => { if (!cancelled) setNotice('Could not load the latest research run.'); })
       .finally(() => { if (!cancelled) setLoading(false); });
-    return () => { cancelled = true; };
+    return () => { cancelled = true; stopPolling(); };
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [bookId]);
 
   async function runNow() {
-    setRunning(true);
+    setStarting(true);
     setNotice('');
     try {
       const res = await fetch(`/api/research/run-profile/${bookId}`, { method: 'POST' });
       const json = await res.json();
-      if (!res.ok) throw Error(json.error || 'The research run failed.');
-      setReport(json.report ?? null);
+      if (!res.ok) throw Error(json.error || 'Could not start the research run.');
+      setRunStatus('queued');
+      setRunError(null);
+      startPolling();
     } catch (e) {
       setNotice((e as Error).message);
     } finally {
-      setRunning(false);
+      setStarting(false);
     }
   }
 
@@ -83,15 +131,17 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
     }
   }
 
-  const runButton = <button className="secondary" disabled={running} onClick={runNow}>
-    {running ? 'Searching and reading reviews online (this can take a couple of minutes)…' : report ? 'Run research again' : 'Run research now'}
+  const isBusy = runStatus === 'queued' || runStatus === 'running';
+  const runButton = <button className="secondary" disabled={starting || isBusy} onClick={runNow}>
+    {isBusy ? (runStatusLabel[runStatus] ?? 'Working…') : starting ? 'Starting…' : report ? 'Run research again' : 'Run research now'}
   </button>;
 
   if (loading) return <p className="hint">Loading the latest research run…</p>;
 
   if (!report) return <div>
-    <p className="hint">No research has been run for this book yet. This searches the web for reviews, reads them, and drafts the profile — no files or command line needed.</p>
+    <p className="hint">No research has been run for this book yet. This searches the web for reviews, reads them, and drafts the profile — no files or command line needed. It runs in the background, so you can navigate away and check back later.</p>
     {runButton}
+    {runStatus === 'failed' && runError && <p className="hint">The last attempt failed: {runError}</p>}
     {notice && <p className="hint">{notice}</p>}
   </div>;
 
@@ -99,6 +149,8 @@ export default function BookProfileResearch({ bookId }: { bookId: string }) {
   return <div>
     <span className={`tag research-status ${verification.status}`}>{statusLabel[verification.status] ?? verification.status}</span>
     <p className="hint">Run: {new Date(report.generatedAt).toLocaleString('en-GB')} · {report.model} · {report.sourceCount} sources</p>
+    {isBusy && <p className="hint">{runStatusLabel[runStatus]} Showing the last completed run below until this one finishes.</p>}
+    {runStatus === 'failed' && runError && <p className="hint">The last attempt failed: {runError} Showing the last successful run below.</p>}
     {!proposal && <div className="opinion-balance blocked-balance"><strong>No profile produced</strong><p>{verification.reason ?? 'The pipeline did not return a usable profile.'}</p></div>}
     {proposal && <>
       <h4>Genre</h4>

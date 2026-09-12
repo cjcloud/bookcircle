@@ -101,13 +101,24 @@ export async function publishBookProfile(
  * components/BookProfileResearch.tsx renders it identically either way.
  * `status` mirrors report.verification.status ('model_supported' |
  * 'unsupported' | 'unresolved') so the caller can show a run's outcome
- * without re-parsing the report. */
+ * without re-parsing the report.
+ *
+ * `report`/`status` describe the LAST COMPLETED run; they're null before a
+ * book's very first run has ever finished. `runStatus` ('idle' | 'queued' |
+ * 'running' | 'done' | 'failed') describes whatever run is CURRENTLY in
+ * flight, if any — see setDraftRunStatus below and
+ * app/api/research/run-profile/[bookId]/workflow/route.ts, which is what
+ * actually runs the pipeline now (as a background job, not inline in the
+ * request that used to time out in production). */
 export interface BookProfileDraft {
   bookId: string;
-  report: Record<string, unknown>;
-  status: string;
-  createdAt: string;
+  report: Record<string, unknown> | null;
+  status: string | null;
+  createdAt: string | null;
   requestedBy: string | null;
+  runStatus: string;
+  runError: string | null;
+  runUpdatedAt: string;
 }
 
 export async function saveDraftReport(
@@ -127,6 +138,36 @@ export async function saveDraftReport(
   if (error) throw Error('Could not save the research run.');
 }
 
+/** Records the status of whatever background run is currently in flight
+ * for a book, independent of any *completed* report (saveDraftReport
+ * above). Upserts by hand rather than via .upsert(), because .upsert()
+ * would otherwise overwrite report/status/created_at with nulls on a book
+ * that already has a completed run sitting in those columns — this must
+ * only ever touch the run_* columns, never the last-completed-run ones. */
+export async function setDraftRunStatus(
+  supabase: SupabaseClient,
+  bookId: string,
+  runStatus: 'queued' | 'running' | 'done' | 'failed',
+  requestedBy: string,
+  runError?: string,
+): Promise<void> {
+  const patch = {
+    run_status: runStatus,
+    run_error: runError ?? null,
+    run_updated_at: new Date().toISOString(),
+    requested_by: requestedBy,
+  };
+  const { data: existing, error: selectError } = await supabase.from('book_profile_drafts').select('book_id').eq('book_id', bookId).maybeSingle();
+  if (selectError) throw Error('Could not check the research run status.');
+  if (existing) {
+    const { error } = await supabase.from('book_profile_drafts').update(patch).eq('book_id', bookId);
+    if (error) throw Error('Could not update the research run status.');
+  } else {
+    const { error } = await supabase.from('book_profile_drafts').insert({ book_id: bookId, ...patch });
+    if (error) throw Error('Could not create the research run record.');
+  }
+}
+
 export async function loadDraftReport(supabase: SupabaseClient, bookId: string): Promise<BookProfileDraft | null> {
   const { data, error } = await supabase.from('book_profile_drafts').select('*').eq('book_id', bookId).maybeSingle();
   if (error) throw Error('Could not load the research run.');
@@ -134,9 +175,12 @@ export async function loadDraftReport(supabase: SupabaseClient, bookId: string):
   if (!row) return null;
   return {
     bookId: row.book_id as string,
-    report: row.report as Record<string, unknown>,
-    status: row.status as string,
-    createdAt: row.created_at as string,
+    report: (row.report as Record<string, unknown> | null) ?? null,
+    status: (row.status as string | null) ?? null,
+    createdAt: (row.created_at as string | null) ?? null,
     requestedBy: (row.requested_by as string | null) ?? null,
+    runStatus: (row.run_status as string | undefined) ?? 'idle',
+    runError: (row.run_error as string | null) ?? null,
+    runUpdatedAt: (row.run_updated_at as string | undefined) ?? new Date().toISOString(),
   };
 }
