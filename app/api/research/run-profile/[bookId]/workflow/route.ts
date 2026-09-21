@@ -85,6 +85,27 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
       await setDraftRunStatus(supabase, bookId, 'done', email);
     });
   } catch (runError) {
+    const message = runError instanceof Error ? runError.message : 'The research run failed.';
+
+    // Upstash's own SDK treats "tried to append a step result to a workflow
+    // QStash has already cancelled" as benign: its outer wrapper
+    // (triggerRouteFunction in @upstash/workflow) catches exactly this
+    // QstashError and finishes gracefully instead of surfacing it as a
+    // failure. Our try/catch sits inside our own callback, so we see it
+    // first -- without this guard we were writing "No profile produced"
+    // with a raw QStash error string into book_profile_drafts as if the
+    // research pipeline itself had failed, when really QStash gave up on
+    // this run (retry exhaustion / timeout on its side) before we ever
+    // produced a real result. Logging and returning without writing
+    // anything leaves run_status at whatever it already was ('running',
+    // set above), so the 15-minute staleness check in
+    // BookProfileResearch.tsx re-enables the button for a clean retry --
+    // the same path already used for a genuinely abandoned run.
+    if (/cancelled workflow/i.test(message)) {
+      console.warn(`[research-workflow] ${bookId}: step tried to publish to an already-cancelled workflow run; leaving run_status as-is. ${message}`);
+      return;
+    }
+
     // Same "never let a failed re-run destroy a previously successful
     // draft" protection the old inline handler had: only write a
     // failure report over the top if there was nothing worth protecting
@@ -93,7 +114,6 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
     // an older successful one is still shown".
     await context.run('save-failure', async () => {
       const supabase = createAdminClient();
-      const message = runError instanceof Error ? runError.message : 'The research run failed.';
       const existing = await loadDraftReport(supabase, bookId);
       const existingHadProposal = !!(existing?.report as { proposal?: unknown } | undefined)?.proposal;
       if (!existingHadProposal) {
