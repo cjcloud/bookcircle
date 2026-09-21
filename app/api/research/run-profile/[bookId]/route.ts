@@ -35,6 +35,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ boo
     const client = new Client({ token });
     await client.trigger({
       url: `${origin}/api/research/run-profile/${bookId}/workflow`,
+      // Every run sends the same {bookId, email} body to the same URL, which
+      // left QStash free to treat a re-run as a duplicate of a prior
+      // (already-terminated) run instead of starting a clean one -- the
+      // replay then hit the old run's finished step history and threw
+      // "Incompatible step name. Expected 'discover', got 'save-failure'".
+      // An explicit, unique ID per trigger rules that out.
+      workflowRunId: crypto.randomUUID(),
       body: JSON.stringify({ bookId, email }),
       retries: 2,
     });

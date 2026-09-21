@@ -19,3 +19,4 @@ book-club-briefing-claude-handoff-*.zip
 # time, never something to version. Nothing sensitive was ever in here
 # (checked: no password in pooler-url), just noise worth not committing.
 supabase/.temp/
+.vercel
