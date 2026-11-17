@@ -60,50 +60,46 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
     await setDraftRunStatus(supabase, bookId, 'running', email);
   });
 
-  try {
-    const sources = await context.run('discover', async () =>
-      discoverReviewSources(bookId, book.title, book.author));
+  // No try/catch around the steps below: Upstash replays this handler from
+  // the top on every step, and a catch branch that calls a different
+  // context.run() ("save-failure") than the one QStash is expecting
+  // ("discover") makes the SDK throw "Incompatible step name", which then
+  // hid the real failure. A step that throws is retried by QStash; once
+  // retries are exhausted, failureFunction below records the failure.
+  const sources = await context.run('discover', async () =>
+    discoverReviewSources(bookId, book.title, book.author));
 
-    const proposal = await context.run('propose', async () =>
-      proposeBookProfile(sources));
+  const proposal = await context.run('propose', async () =>
+    proposeBookProfile(sources));
 
-    const verification = await context.run('verify', async () =>
-      verifyBookProfile(proposal));
+  const verification = await context.run('verify', async () =>
+    verifyBookProfile(proposal));
 
-    await context.run('save-success', async () => {
-      const supabase = createAdminClient();
-      const report = {
-        bookId,
-        generatedAt: new Date().toISOString(),
-        model: process.env.ANTHROPIC_MODEL,
-        sourceCount: proposal.sources.length,
-        proposal,
-        verification,
-        releaseApproved: false,
-      };
-      await saveDraftReport(supabase, bookId, report, email);
-      await setDraftRunStatus(supabase, bookId, 'done', email);
-    });
-  } catch (runError) {
-    const message = runError instanceof Error ? runError.message : 'The research run failed.';
-
-    // Upstash's own SDK treats "tried to append a step result to a workflow
-    // QStash has already cancelled" as benign: its outer wrapper
-    // (triggerRouteFunction in @upstash/workflow) catches exactly this
-    // QstashError and finishes gracefully instead of surfacing it as a
-    // failure. Our try/catch sits inside our own callback, so we see it
-    // first -- without this guard we were writing "No profile produced"
-    // with a raw QStash error string into book_profile_drafts as if the
-    // research pipeline itself had failed, when really QStash gave up on
-    // this run (retry exhaustion / timeout on its side) before we ever
-    // produced a real result. Logging and returning without writing
-    // anything leaves run_status at whatever it already was ('running',
-    // set above), so the 15-minute staleness check in
-    // BookProfileResearch.tsx re-enables the button for a clean retry --
-    // the same path already used for a genuinely abandoned run.
-    if (/cancelled workflow/i.test(message)) {
-      console.warn(`[research-workflow] ${bookId}: step tried to publish to an already-cancelled workflow run; leaving run_status as-is. ${message}`);
-      return;
+  await context.run('save-success', async () => {
+    const supabase = createAdminClient();
+    const report = {
+      bookId,
+      generatedAt: new Date().toISOString(),
+      model: process.env.ANTHROPIC_MODEL,
+      sourceCount: proposal.sources.length,
+      proposal,
+      verification,
+      releaseApproved: false,
+    };
+    await saveDraftReport(supabase, bookId, report, email);
+    await setDraftRunStatus(supabase, bookId, 'done', email);
+  });
+}, {
+  // Runs once, after QStash has exhausted its retries on a failing step.
+  // It has no context.run(), so it talks to the database directly.
+  failureFunction: async ({ context, failResponse }) => {
+    const { bookId, email } = context.requestPayload;
+    let message = failResponse || 'The research run failed.';
+    try {
+      const parsed = JSON.parse(failResponse) as { message?: unknown };
+      if (typeof parsed.message === 'string' && parsed.message) message = parsed.message;
+    } catch {
+      // failResponse was plain text; use it as-is.
     }
 
     // Same "never let a failed re-run destroy a previously successful
@@ -112,23 +108,21 @@ export const { POST } = serve<WorkflowPayload>(async (context) => {
     // yet. run_status still flips to 'failed' either way, so the UI can
     // tell the difference between "no run yet" and "last run failed but
     // an older successful one is still shown".
-    await context.run('save-failure', async () => {
-      const supabase = createAdminClient();
-      const existing = await loadDraftReport(supabase, bookId);
-      const existingHadProposal = !!(existing?.report as { proposal?: unknown } | undefined)?.proposal;
-      if (!existingHadProposal) {
-        const report = {
-          bookId,
-          generatedAt: new Date().toISOString(),
-          model: process.env.ANTHROPIC_MODEL,
-          sourceCount: 0,
-          proposal: null,
-          verification: { status: 'unresolved', reason: message, releaseApproved: false },
-          releaseApproved: false,
-        };
-        await saveDraftReport(supabase, bookId, report, email);
-      }
-      await setDraftRunStatus(supabase, bookId, 'failed', email, message);
-    });
-  }
+    const supabase = createAdminClient();
+    const existing = await loadDraftReport(supabase, bookId);
+    const existingHadProposal = !!(existing?.report as { proposal?: unknown } | undefined)?.proposal;
+    if (!existingHadProposal) {
+      const report = {
+        bookId,
+        generatedAt: new Date().toISOString(),
+        model: process.env.ANTHROPIC_MODEL,
+        sourceCount: 0,
+        proposal: null,
+        verification: { status: 'unresolved', reason: message, releaseApproved: false },
+        releaseApproved: false,
+      };
+      await saveDraftReport(supabase, bookId, report, email);
+    }
+    await setDraftRunStatus(supabase, bookId, 'failed', email, message);
+  },
 });
